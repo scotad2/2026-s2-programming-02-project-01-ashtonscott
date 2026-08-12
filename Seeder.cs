@@ -6,7 +6,28 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp1
 {
-    internal class Seeder
+    static internal class Seeder
     {
+        private static void SeedInstitution()
+        {
+
+        }
+
+        private static void SeedDepartment()
+        {
+
+        }
+
+        private static void SeedCourse()
+        {
+
+        }
+
+        public static void SeedAll()
+        {
+            SeedInstitution();
+            SeedDepartment();
+            SeedCourse();
+        }
     }
 }
