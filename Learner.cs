@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp1
 {
-    internal class Learner
+    /// <summary>
+    /// Learner
+    /// </summary>
+    /// <param name="courseAssessmentMark"></param>
+    internal class Learner(CourseAssessmentMark courseAssessmentMark) : Person
     {
+        public CourseAssessmentMark CourseAssessmentMark { get; set; } = courseAssessmentMark;
     }
 }
