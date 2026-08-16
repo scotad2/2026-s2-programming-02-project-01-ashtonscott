@@ -11,11 +11,11 @@ namespace WinFormsApp1
     /// </summary>
     static internal class Seeder
     {
-        public static readonly List<Institution> Institutions = [];
-        public static readonly List<Department> Departments = [];
-        public static readonly List<Course> Courses = [];
+        private static List<Institution> Institutions = [];
+        private static List<Department> Departments = [];
+        private static List<Course> Courses = [];
 
-        private static void SeedInstitution()
+        public static List<Institution> SeedInstitution()
         {
             Institutions.Add(new Institution("Otago Polytechnic",
                                              "Otago",
@@ -28,9 +28,11 @@ namespace WinFormsApp1
             Institutions.Add(new Institution("University of Canterbury",
                                              "Canterbury",
                                              "New Zealand"));
+
+            return Institutions;
         }
 
-        private static void SeedDepartment()
+        public static List<Department> SeedDepartment()
         {
             // Otago Polytechnic
             Departments.Add(new Department(Institutions[0], "Information Technology"));
@@ -46,9 +48,11 @@ namespace WinFormsApp1
             Departments.Add(new Department(Institutions[2], "Computer Science"));
             Departments.Add(new Department(Institutions[2], "Software Engineering"));
             Departments.Add(new Department(Institutions[2], "Mathematics"));
+
+            return Departments;
         }
 
-        private static void SeedCourse()
+        public static List<Course> SeedCourse()
         {
             // Otago Polytechnic - Information Technology
             Courses.Add(new Course(Departments[0],
@@ -255,13 +259,8 @@ namespace WinFormsApp1
                                    "Application of mathematical techniques to modelling and solving practical scientific problems.",
                                    15,
                                    950));
-        }
 
-        public static void SeedAll()
-        {
-            SeedInstitution();
-            SeedDepartment();
-            SeedCourse();
+            return Courses;
         }
     }
 }

@@ -5,6 +5,11 @@ namespace WinFormsApp1
         public Form1()
         {
             InitializeComponent();
+
+            // Seeders
+            List<Institution> institutions = Seeder.SeedInstitution();
+            List<Department> departments = Seeder.SeedDepartment();
+            List<Course> courses = Seeder.SeedCourse();
         }
     }
 }
