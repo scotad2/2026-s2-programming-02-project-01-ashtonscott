@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp1
 {
+    /// <summary>
+    /// Console Debugger
+    /// </summary>
     internal static class ConsoleDebugger
     {
         public static bool Enabled { get; set; } = true;
@@ -28,6 +31,11 @@ namespace WinFormsApp1
             };
         }
 
+        /// <summary>
+        /// Log message to the Console
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="type"></param>
         public static void Log(string message, LogType type)
         {
             if (Enabled)
