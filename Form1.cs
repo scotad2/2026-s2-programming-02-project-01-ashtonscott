@@ -7,6 +7,7 @@ namespace WinFormsApp1
             InitializeComponent();
 
             // Seeders
+            ConsoleDebugger.Log("Seeding data.", ConsoleDebugger.LogType.Info);
             List<Institution> institutions = Seeder.SeedInstitution();
             List<Department> departments = Seeder.SeedDepartment();
             List<Course> courses = Seeder.SeedCourse();
