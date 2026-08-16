@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WinFormsApp1
+﻿namespace WinFormsApp1
 {
-    internal class Lecturer : Person
+    /// <summary>
+    /// Lecturer
+    /// </summary>
+    /// <param name="position"></param>
+    /// <param name="salary"></param>
+    /// <param name="course"></param>
+    internal class Lecturer(Lecturer.EPosition position, Lecturer.ESalary salary, Course course) : Person
     {
         public enum EPosition
         {
@@ -25,5 +25,9 @@ namespace WinFormsApp1
             Associate_Professor_Salary = 130000,
             Professor_Salary = 145000
         }
+
+        public EPosition Position { get; set; } = position;
+        public ESalary Salary { get; set; } = salary;
+        public Course Course { get; set; } = course;
     }
 }
