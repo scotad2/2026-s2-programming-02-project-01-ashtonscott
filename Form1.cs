@@ -7,10 +7,14 @@ namespace WinFormsApp1
             InitializeComponent();
 
             // Seeders
-            ConsoleDebugger.Log("Seeding data.", ConsoleDebugger.LogType.Info);
+            ConsoleDebugger.Log("Loading institute, department and course data.", ConsoleDebugger.LogType.Info);
             List<Institution> institutions = Seeder.SeedInstitution();
             List<Department> departments = Seeder.SeedDepartment();
             List<Course> courses = Seeder.SeedCourse();
+
+            DataHandler handler = new();
+
+            handler.LoadLearners(courses);
         }
     }
 }

@@ -3,6 +3,6 @@
     internal class CourseAssessmentMark(Course course, List<int> marks)
     {
         public Course Course { get; set; } = course;
-        private List<int> Marks = marks;
+        private List<int> _marks = marks;
     }
 }

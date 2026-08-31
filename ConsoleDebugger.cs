@@ -36,7 +36,7 @@ namespace WinFormsApp1
         /// </summary>
         /// <param name="message"></param>
         /// <param name="type"></param>
-        public static void Log(string message, LogType type)
+        public static void Log(string message, LogType type = ConsoleDebugger.LogType.Debug)
         {
             if (Enabled)
             {

@@ -4,8 +4,8 @@
     /// Learner
     /// </summary>
     /// <param name="courseAssessmentMark"></param>
-    internal class Learner(CourseAssessmentMark courseAssessmentMark) : Person
+    internal class Learner : Person
     {
-        public CourseAssessmentMark CourseAssessmentMark { get; set; } = courseAssessmentMark;
+        public CourseAssessmentMark CourseAssessmentMark { get; set; }
     }
 }
