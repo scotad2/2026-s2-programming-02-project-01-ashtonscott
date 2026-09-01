@@ -7,5 +7,15 @@
     internal class Learner : Person
     {
         public CourseAssessmentMark CourseAssessmentMark { get; set; }
+
+        public Learner(int id, string firstName, string lastName, CourseAssessmentMark courseAssessmentMark)
+        {
+            Id = id;
+            FirstName = firstName;
+            LastName = lastName;
+            CourseAssessmentMark = courseAssessmentMark;
+
+            ConsoleDebugger.Log($"Created Learner - {id}, {firstName}, {lastName}");
+        }
     }
 }

@@ -4,9 +4,6 @@ namespace WinFormsApp1
 {
     internal class DataHandler
     {
-        public List<Learner> Learner = [];
-        public List<Lecturer> Lecturer = [];
-
         // learners.txt
 
         // ┌────┬─────────────┬────────────┬───────────────┬───────────────────┐
@@ -48,6 +45,8 @@ namespace WinFormsApp1
                 }
 
                 CourseAssessmentMark courseAssessmentMark = new(courses[courseIndex], marks);
+
+                Learner learner = new(id, firstName, lastName, courseAssessmentMark);
             }
         }
     }
