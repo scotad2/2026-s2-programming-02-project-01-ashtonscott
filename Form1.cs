@@ -12,14 +12,11 @@ namespace WinFormsApp1
             List<Department> departments = Seeder.SeedDepartment();
             List<Course> courses = Seeder.SeedCourse();
 
-            List<Learner> Learner = [];
-            List<Lecturer> Lecturer = [];
-
-            DataHandler handler = new();
+            DataHandler dataHandler = new();
 
             try
             {
-                handler.LoadLearners(courses);
+                dataHandler.LoadLearners(courses);
             }
             catch (Exception ex)
             {
