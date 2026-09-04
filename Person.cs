@@ -10,50 +10,50 @@ namespace WinFormsApp1
         public int Id { get; set; }
         public string FirstName
         {
-            get
-            {
-                return _firstName;
-            }
+            get { return _firstName; }
             set
             {
-                if (string.IsNullOrEmpty(value))
+                if (NameIsValid(value))
                 {
-                    throw new ArgumentException();
+                    _firstName = value;
                 }
-
-                if (invalid.IsMatch(value))
+                else
                 {
-                    throw new ArgumentException();
+                    throw new Exception();
                 }
-
-                _firstName = value;
             }
         }
         public string LastName
         {
-            get
-            {
-                return _lastName;
-            }
+            get { return _lastName; }
             set
             {
-                if (string.IsNullOrEmpty(value))
+                if (NameIsValid(value))
                 {
-                    throw new ArgumentException();
+                    _lastName = value;
                 }
-
-                if (invalid.IsMatch(value))
+                else
                 {
-                    throw new ArgumentException();
+                    throw new Exception();
                 }
-
-                _lastName = value;
             }
         }
 
         /// <summary>
         /// Regex name validation pattern, checks there are no numbers or special characters except hyphens or apostrophes.
         /// </summary>
-        private static readonly Regex invalid = new(@"[^A-Za-z'-]", RegexOptions.Compiled);
+        private static readonly Regex invalidPattern = new(@"[^A-Za-z'-]", RegexOptions.Compiled);
+
+        private static bool NameIsValid(string value)
+        {
+            if (string.IsNullOrEmpty(value) || invalidPattern.IsMatch(value))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }

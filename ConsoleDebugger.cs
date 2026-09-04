@@ -37,7 +37,7 @@
                 string colour = GetColour(type);
                 string reset = "\u001b[0m";
 
-                // E.g. "[12:10:53] [Error] This is an error message."
+                // E.g. "[12:10:53] [Error] This is an error message..."
                 Console.WriteLine($"[{DateTime.Now:HH:mm:ss}] [{colour}{type}{reset}] {message}");
             }
         }
