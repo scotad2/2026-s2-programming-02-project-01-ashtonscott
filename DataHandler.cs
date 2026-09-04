@@ -24,12 +24,16 @@ namespace WinFormsApp1
 {
     internal class DataHandler
     {
+        public List<Institution> institutions = Seeder.SeedInstitution();
+        public List<Department> departments = Seeder.SeedDepartment();
+        public List<Course> courses = Seeder.SeedCourse();
+
         public List<Learner> Learners = [];
         public List<Lecturer> Lecturers = [];
 
         private const string DataPath = @"../../../data/";
 
-        public void LoadLearners(List<Course> courses)
+        public void LoadLearners()
         {
             if (!File.Exists(DataPath + "learners.txt"))
             {

@@ -19,7 +19,7 @@ namespace WinFormsApp1
                 }
                 else
                 {
-                    throw new Exception();
+                    throw new Exception($"'{value}' is not a valid first name.");
                 }
             }
         }
@@ -34,7 +34,7 @@ namespace WinFormsApp1
                 }
                 else
                 {
-                    throw new Exception();
+                    throw new Exception($"'{value}' is not a valid last name.");
                 }
             }
         }

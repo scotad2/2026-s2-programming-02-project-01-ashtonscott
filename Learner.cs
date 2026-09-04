@@ -15,7 +15,7 @@
             LastName = lastName;
             CourseAssessmentMark = courseAssessmentMark;
 
-            ConsoleDebugger.Log($"Created Learner - {id}, {firstName}, {lastName}");
+            ConsoleDebugger.Log($"Added '{firstName} {lastName}'");
         }
     }
 }

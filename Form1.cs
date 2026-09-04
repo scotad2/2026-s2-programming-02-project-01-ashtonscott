@@ -6,23 +6,11 @@ namespace WinFormsApp1
         {
             InitializeComponent();
 
-            // Seeders
-            ConsoleDebugger.Log("Loading institute, department and course data.", ConsoleDebugger.LogType.Info);
-            List<Institution> institutions = Seeder.SeedInstitution();
-            List<Department> departments = Seeder.SeedDepartment();
-            List<Course> courses = Seeder.SeedCourse();
-
             DataHandler dataHandler = new();
 
             try
             {
-                dataHandler.LoadLearners(courses);
-
-                foreach (var learner in dataHandler.Learners)
-                {
-                    Console.WriteLine(learner.CourseAssessmentMark.GetAverageMark());
-                    Console.WriteLine();
-                }
+                dataHandler.LoadLearners();
             }
             catch (Exception ex)
             {
