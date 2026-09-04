@@ -20,11 +20,8 @@ namespace WinFormsApp1
 
                 foreach (var learner in dataHandler.Learners)
                 {
-                    foreach(var grade in learner.CourseAssessmentMark.GetAllGrades())
-                    {
-                        Console.WriteLine(grade);
-                    }
-                    Console.WriteLine("");
+                    Console.WriteLine(learner.CourseAssessmentMark.GetAverageMark());
+                    Console.WriteLine();
                 }
             }
             catch (Exception ex)

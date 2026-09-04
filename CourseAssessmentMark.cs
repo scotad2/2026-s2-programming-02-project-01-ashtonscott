@@ -76,5 +76,30 @@
 
             return grades;
         }
+
+        public List<int> GetHighestMarks()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<int> GetLowestMark()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<int> GetFailMarks()
+        {
+            throw new NotImplementedException();
+        }
+
+        public double GetAverageMark()
+        {
+            return _marks.Average();
+        }
+
+        public Grade GetAverageGrade()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
