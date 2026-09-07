@@ -79,12 +79,14 @@
 
         public List<int> GetHighestMarks()
         {
-            throw new NotImplementedException();
+            int maxValue = _marks.Max();
+            return _marks.Where(n => n == maxValue).ToList();
         }
 
-        public List<int> GetLowestMark()
+        public List<int> GetLowestMarks()
         {
-            throw new NotImplementedException();
+            int minValue = _marks.Min();
+            return _marks.Where(n => n == minValue).ToList();
         }
 
         public List<int> GetFailMarks()

@@ -11,6 +11,15 @@ namespace WinFormsApp1
             try
             {
                 dataHandler.LoadLearners();
+
+                foreach (var learner  in dataHandler.Learners)
+                {
+                    foreach (var mark in learner.CourseAssessmentMark.GetLowestMarks())
+                    {
+                        Console.WriteLine($"{mark}");
+                    }
+                    Console.WriteLine("");
+                }
             }
             catch (Exception ex)
             {
