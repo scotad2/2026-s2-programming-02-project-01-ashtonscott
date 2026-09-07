@@ -91,7 +91,17 @@
 
         public List<int> GetFailMarks()
         {
-            throw new NotImplementedException();
+            List<int> failMarks = [];
+
+            foreach (var mark in _marks)
+            {
+                if (mark <= 49)
+                {
+                    failMarks.Add(mark);
+                }
+            }
+
+            return failMarks;
         }
 
         public double GetAverageMark()
@@ -99,9 +109,11 @@
             return _marks.Average();
         }
 
-        public Grade GetAverageGrade()
-        {
-            throw new NotImplementedException();
-        }
+        //public Grade GetAverageGrade()
+        //{
+        //    List<Grade> grades = GetAllGrades();
+
+        //    return grades.Average();
+        //}
     }
 }

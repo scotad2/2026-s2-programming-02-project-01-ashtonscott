@@ -14,7 +14,7 @@ namespace WinFormsApp1
 
                 foreach (var learner  in dataHandler.Learners)
                 {
-                    foreach (var mark in learner.CourseAssessmentMark.GetLowestMarks())
+                    foreach (var mark in learner.CourseAssessmentMark.GetFailMarks())
                     {
                         Console.WriteLine($"{mark}");
                     }
