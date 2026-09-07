@@ -17,5 +17,14 @@
 
             ConsoleDebugger.Log($"Added '{firstName} {lastName}'");
         }
+
+        public override string ToString()
+        {
+            return $"""
+                ID: {Id}
+                Firstname: {FirstName}
+                Lastname: {LastName}
+                """;
+        }
     }
 }

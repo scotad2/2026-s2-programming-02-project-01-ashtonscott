@@ -1,4 +1,6 @@
-﻿namespace WinFormsApp1
+﻿using static WinFormsApp1.Lecturer;
+
+namespace WinFormsApp1
 {
     /// <summary>
     /// Lecturer
@@ -6,8 +8,23 @@
     /// <param name="position"></param>
     /// <param name="salary"></param>
     /// <param name="course"></param>
-    internal class Lecturer(Lecturer.EPosition position, Lecturer.ESalary salary, Course course) : Person
+    internal class Lecturer : Person
     {
+        private EPosition _position;
+        private ESalary _salary;
+
+        private int _courseIndex;
+
+        public Lecturer(int id, string firstName, string lastName, EPosition ePosition, ESalary eSalary, int courseIndex)
+        {
+            Id = id;
+            FirstName = firstName;
+            LastName = lastName;
+            _position = ePosition;
+            _salary = eSalary;
+            _courseIndex = courseIndex;
+        }
+
         public enum EPosition
         {
             Lecturer = 0,
@@ -26,8 +43,17 @@
             Professor_Salary = 145000
         }
 
-        public EPosition Position { get; set; } = position;
-        public ESalary Salary { get; set; } = salary;
-        public Course Course { get; set; } = course;
+        public override string ToString()
+        {
+            return $"""
+                ID: {Id}
+                Firstname: {FirstName}
+                Lastname: {LastName}
+                """;
+        }
+
+        //public EPosition Position { get; set; } = position;
+        //public ESalary Salary { get; set; } = salary;
+        //public Course Course { get; set; } = course;
     }
 }

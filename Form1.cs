@@ -12,12 +12,17 @@ namespace WinFormsApp1
             {
                 dataHandler.LoadLearners();
 
-                foreach (var learner  in dataHandler.Learners)
+                foreach (var learner in dataHandler.learners)
                 {
-                    foreach (var mark in learner.CourseAssessmentMark.GetFailMarks())
-                    {
-                        Console.WriteLine($"{mark}");
-                    }
+                    Console.WriteLine(learner.ToString());
+                    Console.WriteLine("");
+                }
+                
+                dataHandler.LoadLecturers();
+
+                foreach (var lecturer in dataHandler.lecturers)
+                {
+                    Console.WriteLine(lecturer.ToString());
                     Console.WriteLine("");
                 }
             }

@@ -28,8 +28,8 @@ namespace WinFormsApp1
         public List<Department> departments = Seeder.SeedDepartment();
         public List<Course> courses = Seeder.SeedCourse();
 
-        public List<Learner> Learners = [];
-        public List<Lecturer> Lecturers = [];
+        public List<Learner> learners = [];
+        public List<Lecturer> lecturers = [];
 
         private const string DataPath = @"../../../data/";
 
@@ -61,27 +61,35 @@ namespace WinFormsApp1
                 CourseAssessmentMark courseAssessmentMark = new(courses[courseIndex], marks);
 
                 // Add Learners to the Learner list
-                Learners.Add(new(id, firstName, lastName, courseAssessmentMark));
+                learners.Add(new(id, firstName, lastName, courseAssessmentMark));
             }
         }
 
-        //public void LoadLecturers()
-        //{
-        //    if (!File.Exists(DataPath + "lecturers.txt"))
-        //    {
-        //        throw new FileNotFoundException();
-        //    }
+        public void LoadLecturers()
+        {
+            if (!File.Exists(DataPath + "lecturers.txt"))
+            {
+                throw new FileNotFoundException();
+            }
 
-        //    string[] lines = File.ReadAllLines(DataPath + "lecturers.txt");
-        //    foreach (string line in lines)
-        //    {
-        //        string[] fields = line.Split(",");
+            string[] lines = File.ReadAllLines(DataPath + "lecturers.txt");
+            foreach (string line in lines)
+            {
+                string[] fields = line.Split(",");
 
-        //        // Lecturer fields
-        //        int id = int.Parse(fields[0]); // Id
-        //        string firstName = fields[1]; // First Name
-        //        string lastName = fields[2]; // Last Name
-        //    }
-        //}
+                // Lecturer fields
+                int id = int.Parse(fields[0]); // Id
+                string firstName = fields[1]; // First Name
+                string lastName = fields[2]; // Last Name
+
+                // Wow these look horrendous, I think this is right though..?
+                Lecturer.EPosition ePosition = (Lecturer.EPosition)Enum.Parse(typeof(Lecturer.EPosition), fields[3]);
+                Lecturer.ESalary eSalary = (Lecturer.ESalary)Enum.Parse(typeof(Lecturer.ESalary), fields[4]);
+
+                int courseIndex = int.Parse(fields[5]); // Course Index
+
+                lecturers.Add(new(id, firstName, lastName, ePosition, eSalary, courseIndex));
+            }
+        }
     }
 }
