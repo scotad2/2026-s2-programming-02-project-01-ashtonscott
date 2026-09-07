@@ -7,8 +7,6 @@
 - [x] Course.cs
 - [x] Seeder.cs
 
-- [x] LoadLearners 
-
 - [ ] CourseAssessmentMark.cs
 	- [x] GetAllMarks
 	- [x] GetAllGrades
@@ -18,5 +16,6 @@
 	- [x] GetAverageMark
 	- [ ] GetAverageGrade
 
+- [x] LoadLearners
 - [ ] LoadLecturers
 	- [ ] Check functionality.
