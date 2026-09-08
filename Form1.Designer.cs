@@ -194,7 +194,7 @@
             DataGridViewMain.Location = new Point(315, 50);
             DataGridViewMain.Name = "DataGridViewMain";
             DataGridViewMain.RowHeadersWidth = 51;
-            DataGridViewMain.Size = new Size(825, 625);
+            DataGridViewMain.Size = new Size(825, 630);
             DataGridViewMain.TabIndex = 13;
             // 
             // Form1
