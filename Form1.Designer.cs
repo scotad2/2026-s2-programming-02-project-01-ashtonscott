@@ -41,6 +41,8 @@
             AddLecturerButton = new Button();
             RemoveLecturerButton = new Button();
             CustomQueriesButton = new Button();
+            DataGridViewMain = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)DataGridViewMain).BeginInit();
             SuspendLayout();
             // 
             // DisplayCourseDetailsButton
@@ -186,11 +188,21 @@
             CustomQueriesButton.TextAlign = ContentAlignment.MiddleLeft;
             CustomQueriesButton.UseVisualStyleBackColor = true;
             // 
+            // DataGridViewMain
+            // 
+            DataGridViewMain.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataGridViewMain.Location = new Point(315, 50);
+            DataGridViewMain.Name = "DataGridViewMain";
+            DataGridViewMain.RowHeadersWidth = 51;
+            DataGridViewMain.Size = new Size(825, 625);
+            DataGridViewMain.TabIndex = 13;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1218, 724);
+            Controls.Add(DataGridViewMain);
             Controls.Add(CustomQueriesButton);
             Controls.Add(RemoveLecturerButton);
             Controls.Add(AddLecturerButton);
@@ -206,6 +218,7 @@
             Controls.Add(DisplayCourseDetailsButton);
             Name = "Form1";
             Text = "Project 1 - Ashton Scott";
+            ((System.ComponentModel.ISupportInitialize)DataGridViewMain).EndInit();
             ResumeLayout(false);
         }
 
@@ -224,5 +237,6 @@
         private Button AddLecturerButton;
         private Button RemoveLecturerButton;
         private Button CustomQueriesButton;
+        private DataGridView DataGridViewMain;
     }
 }
