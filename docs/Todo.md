@@ -14,8 +14,8 @@
 	- [x] GetLowestMarks
 	- [x] GetFailMarks
 	- [x] GetAverageMark
-	- [ ] GetAverageGrade
+	- [x] GetAverageGrade
 
 - [x] LoadLearners
-- [ ] LoadLecturers
-	- [ ] Check functionality.
+- [x] LoadLecturers
+
