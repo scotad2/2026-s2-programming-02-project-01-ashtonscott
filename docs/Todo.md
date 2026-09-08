@@ -7,7 +7,7 @@
 - [x] Course.cs
 - [x] Seeder.cs
 
-- [ ] CourseAssessmentMark.cs
+- [x] CourseAssessmentMark.cs
 	- [x] GetAllMarks
 	- [x] GetAllGrades
 	- [x] GetHighestMarks
