@@ -53,6 +53,7 @@ namespace WinFormsApp1
 
                 List<int> marks = [];
 
+                // Marks
                 for (int i = 4; i < fields.Length; i++)
                 {
                     marks.Add(int.Parse(fields[i]));
@@ -67,28 +68,29 @@ namespace WinFormsApp1
 
         public void LoadLecturers()
         {
-            if (!File.Exists(DataPath + "lecturers.txt"))
+            string filePath = Path.Combine(DataPath, "lecturers.txt");
+
+            if (!File.Exists(filePath))
             {
                 throw new FileNotFoundException();
             }
 
-            string[] lines = File.ReadAllLines(DataPath + "lecturers.txt");
+            string[] lines = File.ReadAllLines(filePath);
+
             foreach (string line in lines)
             {
                 string[] fields = line.Split(",");
 
                 // Lecturer fields
-                int id = int.Parse(fields[0]); // Id
-                string firstName = fields[1]; // First Name
-                string lastName = fields[2]; // Last Name
+                int id = int.Parse(fields[0]);                  // Id
+                string firstName = fields[1];                   // First Name
+                string lastName = fields[2];                    // Last Name
+                Lecturer.EPosition position = (Lecturer.EPosition)int.Parse(fields[3]); // EPosition
+                Lecturer.ESalary salary = (Lecturer.ESalary)int.Parse(fields[4]);       // ESalary
+                int courseIndex = int.Parse(fields[5]);         // Course Index
 
-                // Wow these look horrendous, I think this is right though..?
-                Lecturer.EPosition ePosition = (Lecturer.EPosition)Enum.Parse(typeof(Lecturer.EPosition), fields[3]);
-                Lecturer.ESalary eSalary = (Lecturer.ESalary)Enum.Parse(typeof(Lecturer.ESalary), fields[4]);
-
-                int courseIndex = int.Parse(fields[5]); // Course Index
-
-                lecturers.Add(new(id, firstName, lastName, ePosition, eSalary, courseIndex));
+                // Add Lecturer to the Lecturer list
+                lecturers.Add(new(id, firstName, lastName, position, salary, courseIndex));
             }
         }
     }

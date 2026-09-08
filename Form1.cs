@@ -11,24 +11,23 @@ namespace WinFormsApp1
             try
             {
                 dataHandler.LoadLearners();
-
-                foreach (var learner in dataHandler.learners)
-                {
-                    Console.WriteLine(learner.ToString());
-                    Console.WriteLine("");
-                }
-                
                 dataHandler.LoadLecturers();
-
-                foreach (var lecturer in dataHandler.lecturers)
-                {
-                    Console.WriteLine(lecturer.ToString());
-                    Console.WriteLine("");
-                }
             }
             catch (Exception ex)
             {
                 ConsoleDebugger.Log(ex.Message, ConsoleDebugger.LogType.Error);
+            }
+
+            foreach (var learner in dataHandler.learners)
+            {
+                ConsoleDebugger.Log($"\n{learner.ToString()}", ConsoleDebugger.LogType.Info);
+                Console.WriteLine();
+            }
+
+            foreach (var lecturer in dataHandler.lecturers)
+            {
+                ConsoleDebugger.Log($"\n{lecturer.ToString()}", ConsoleDebugger.LogType.Info);
+                Console.WriteLine();
             }
         }
     }

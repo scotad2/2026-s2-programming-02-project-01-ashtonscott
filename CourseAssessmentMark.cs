@@ -1,4 +1,6 @@
-﻿namespace WinFormsApp1
+﻿using System.Collections;
+
+namespace WinFormsApp1
 {
     internal class CourseAssessmentMark(Course course, List<int> marks)
     {
@@ -109,11 +111,16 @@
             return _marks.Average();
         }
 
-        //public Grade GetAverageGrade()
-        //{
-        //    List<Grade> grades = GetAllGrades();
+        public Grade GetAverageGrade() 
+        { 
+            double averageMark = GetAverageMark(); 
 
-        //    return grades.Average();
-        //}
+            return GetGrade((int)Math.Round(averageMark)); 
+        }
+
+        public override string ToString()
+        {
+            return string.Join(",", _marks);
+        }
     }
 }

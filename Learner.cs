@@ -15,15 +15,17 @@
             LastName = lastName;
             CourseAssessmentMark = courseAssessmentMark;
 
-            ConsoleDebugger.Log($"Added '{firstName} {lastName}'");
+            ConsoleDebugger.Log($"Added Student '{firstName} {lastName}'");
         }
 
         public override string ToString()
         {
             return $"""
+                Type: Learner
                 ID: {Id}
                 Firstname: {FirstName}
                 Lastname: {LastName}
+                Course Marks: {CourseAssessmentMark}
                 """;
         }
     }
