@@ -19,3 +19,7 @@
 - [x] LoadLearners
 - [x] LoadLecturers
 
+- [ ] Front-end
+
+- [ ] Custom Queries
+

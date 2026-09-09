@@ -31,7 +31,7 @@
             DisplayCourseDetailsButton = new Button();
             DisplayAllMarksButton = new Button();
             DisplayAllGradesButton = new Button();
-            DisplayHighestMarksbutton = new Button();
+            DisplayHighestMarksButton = new Button();
             DisplayLowestMarksButton = new Button();
             DisplayFailMarksButton = new Button();
             DisplayAverageMarksButton = new Button();
@@ -47,161 +47,175 @@
             // 
             // DisplayCourseDetailsButton
             // 
-            DisplayCourseDetailsButton.Location = new Point(50, 50);
-            DisplayCourseDetailsButton.Margin = new Padding(5);
+            DisplayCourseDetailsButton.Location = new Point(44, 38);
+            DisplayCourseDetailsButton.Margin = new Padding(4);
             DisplayCourseDetailsButton.Name = "DisplayCourseDetailsButton";
-            DisplayCourseDetailsButton.Size = new Size(215, 30);
+            DisplayCourseDetailsButton.Size = new Size(188, 22);
             DisplayCourseDetailsButton.TabIndex = 0;
             DisplayCourseDetailsButton.Text = "Display Course Details";
             DisplayCourseDetailsButton.TextAlign = ContentAlignment.MiddleLeft;
             DisplayCourseDetailsButton.UseVisualStyleBackColor = true;
+            DisplayCourseDetailsButton.Click += DisplayCourseDetailsButton_Click;
             // 
             // DisplayAllMarksButton
             // 
-            DisplayAllMarksButton.Location = new Point(50, 100);
-            DisplayAllMarksButton.Margin = new Padding(5);
+            DisplayAllMarksButton.Location = new Point(44, 75);
+            DisplayAllMarksButton.Margin = new Padding(4);
             DisplayAllMarksButton.Name = "DisplayAllMarksButton";
-            DisplayAllMarksButton.Size = new Size(215, 30);
+            DisplayAllMarksButton.Size = new Size(188, 22);
             DisplayAllMarksButton.TabIndex = 1;
             DisplayAllMarksButton.Text = "Display All Marks";
             DisplayAllMarksButton.TextAlign = ContentAlignment.MiddleLeft;
             DisplayAllMarksButton.UseVisualStyleBackColor = true;
+            DisplayAllMarksButton.Click += DisplayAllMarksButton_Click;
             // 
             // DisplayAllGradesButton
             // 
-            DisplayAllGradesButton.Location = new Point(50, 150);
-            DisplayAllGradesButton.Margin = new Padding(5);
+            DisplayAllGradesButton.Location = new Point(44, 112);
+            DisplayAllGradesButton.Margin = new Padding(4);
             DisplayAllGradesButton.Name = "DisplayAllGradesButton";
-            DisplayAllGradesButton.Size = new Size(215, 30);
+            DisplayAllGradesButton.Size = new Size(188, 22);
             DisplayAllGradesButton.TabIndex = 2;
             DisplayAllGradesButton.Text = "Display All Grades";
             DisplayAllGradesButton.TextAlign = ContentAlignment.MiddleLeft;
             DisplayAllGradesButton.UseVisualStyleBackColor = true;
+            DisplayAllGradesButton.Click += DisplayAllGradesButton_Click;
             // 
-            // DisplayHighestMarksbutton
+            // DisplayHighestMarksButton
             // 
-            DisplayHighestMarksbutton.Location = new Point(50, 200);
-            DisplayHighestMarksbutton.Margin = new Padding(5);
-            DisplayHighestMarksbutton.Name = "DisplayHighestMarksbutton";
-            DisplayHighestMarksbutton.Size = new Size(215, 30);
-            DisplayHighestMarksbutton.TabIndex = 3;
-            DisplayHighestMarksbutton.Text = "Display Highest Marks";
-            DisplayHighestMarksbutton.TextAlign = ContentAlignment.MiddleLeft;
-            DisplayHighestMarksbutton.UseVisualStyleBackColor = true;
+            DisplayHighestMarksButton.Location = new Point(44, 150);
+            DisplayHighestMarksButton.Margin = new Padding(4);
+            DisplayHighestMarksButton.Name = "DisplayHighestMarksButton";
+            DisplayHighestMarksButton.Size = new Size(188, 22);
+            DisplayHighestMarksButton.TabIndex = 3;
+            DisplayHighestMarksButton.Text = "Display Highest Marks";
+            DisplayHighestMarksButton.TextAlign = ContentAlignment.MiddleLeft;
+            DisplayHighestMarksButton.UseVisualStyleBackColor = true;
+            DisplayHighestMarksButton.Click += DisplayHighestMarksButton_Click;
             // 
             // DisplayLowestMarksButton
             // 
-            DisplayLowestMarksButton.Location = new Point(50, 250);
-            DisplayLowestMarksButton.Margin = new Padding(5);
+            DisplayLowestMarksButton.Location = new Point(44, 188);
+            DisplayLowestMarksButton.Margin = new Padding(4);
             DisplayLowestMarksButton.Name = "DisplayLowestMarksButton";
-            DisplayLowestMarksButton.Size = new Size(215, 30);
+            DisplayLowestMarksButton.Size = new Size(188, 22);
             DisplayLowestMarksButton.TabIndex = 4;
             DisplayLowestMarksButton.Text = "Display Lowest Marks";
             DisplayLowestMarksButton.TextAlign = ContentAlignment.MiddleLeft;
             DisplayLowestMarksButton.UseVisualStyleBackColor = true;
+            DisplayLowestMarksButton.Click += DisplayLowestMarksButton_Click;
             // 
             // DisplayFailMarksButton
             // 
-            DisplayFailMarksButton.Location = new Point(50, 300);
-            DisplayFailMarksButton.Margin = new Padding(5);
+            DisplayFailMarksButton.Location = new Point(44, 225);
+            DisplayFailMarksButton.Margin = new Padding(4);
             DisplayFailMarksButton.Name = "DisplayFailMarksButton";
-            DisplayFailMarksButton.Size = new Size(215, 30);
+            DisplayFailMarksButton.Size = new Size(188, 22);
             DisplayFailMarksButton.TabIndex = 5;
             DisplayFailMarksButton.Text = "Display Fail Marks";
             DisplayFailMarksButton.TextAlign = ContentAlignment.MiddleLeft;
             DisplayFailMarksButton.UseVisualStyleBackColor = true;
+            DisplayFailMarksButton.Click += DisplayFailMarksButton_Click;
             // 
             // DisplayAverageMarksButton
             // 
-            DisplayAverageMarksButton.Location = new Point(50, 350);
-            DisplayAverageMarksButton.Margin = new Padding(5);
+            DisplayAverageMarksButton.Location = new Point(44, 262);
+            DisplayAverageMarksButton.Margin = new Padding(4);
             DisplayAverageMarksButton.Name = "DisplayAverageMarksButton";
-            DisplayAverageMarksButton.Size = new Size(215, 30);
+            DisplayAverageMarksButton.Size = new Size(188, 22);
             DisplayAverageMarksButton.TabIndex = 6;
             DisplayAverageMarksButton.Text = "Display Average Marks";
             DisplayAverageMarksButton.TextAlign = ContentAlignment.MiddleLeft;
             DisplayAverageMarksButton.UseVisualStyleBackColor = true;
+            DisplayAverageMarksButton.Click += DisplayAverageMarksButton_Click;
             // 
             // DisplayAverageGradesButton
             // 
-            DisplayAverageGradesButton.Location = new Point(50, 400);
-            DisplayAverageGradesButton.Margin = new Padding(5);
+            DisplayAverageGradesButton.Location = new Point(44, 300);
+            DisplayAverageGradesButton.Margin = new Padding(4);
             DisplayAverageGradesButton.Name = "DisplayAverageGradesButton";
-            DisplayAverageGradesButton.Size = new Size(215, 30);
+            DisplayAverageGradesButton.Size = new Size(188, 22);
             DisplayAverageGradesButton.TabIndex = 7;
             DisplayAverageGradesButton.Text = "Display Average Grades";
             DisplayAverageGradesButton.TextAlign = ContentAlignment.MiddleLeft;
             DisplayAverageGradesButton.UseVisualStyleBackColor = true;
+            DisplayAverageGradesButton.Click += DisplayAverageGradesButton_Click;
             // 
             // DisplayLecturerDetailsButton
             // 
-            DisplayLecturerDetailsButton.Location = new Point(50, 450);
-            DisplayLecturerDetailsButton.Margin = new Padding(5);
+            DisplayLecturerDetailsButton.Location = new Point(44, 338);
+            DisplayLecturerDetailsButton.Margin = new Padding(4);
             DisplayLecturerDetailsButton.Name = "DisplayLecturerDetailsButton";
-            DisplayLecturerDetailsButton.Size = new Size(215, 30);
+            DisplayLecturerDetailsButton.Size = new Size(188, 22);
             DisplayLecturerDetailsButton.TabIndex = 8;
             DisplayLecturerDetailsButton.Text = "Display Lecturer Details";
             DisplayLecturerDetailsButton.TextAlign = ContentAlignment.MiddleLeft;
             DisplayLecturerDetailsButton.UseVisualStyleBackColor = true;
+            DisplayLecturerDetailsButton.Click += DisplayLecturerDetailsButton_Click;
             // 
             // AddLearnerButton
             // 
-            AddLearnerButton.Location = new Point(50, 500);
-            AddLearnerButton.Margin = new Padding(5);
+            AddLearnerButton.Location = new Point(44, 375);
+            AddLearnerButton.Margin = new Padding(4);
             AddLearnerButton.Name = "AddLearnerButton";
-            AddLearnerButton.Size = new Size(215, 30);
+            AddLearnerButton.Size = new Size(188, 22);
             AddLearnerButton.TabIndex = 9;
             AddLearnerButton.Text = "Add Learner";
             AddLearnerButton.TextAlign = ContentAlignment.MiddleLeft;
             AddLearnerButton.UseVisualStyleBackColor = true;
+            AddLearnerButton.Click += AddLearnerButton_Click;
             // 
             // AddLecturerButton
             // 
-            AddLecturerButton.Location = new Point(50, 550);
-            AddLecturerButton.Margin = new Padding(5);
+            AddLecturerButton.Location = new Point(44, 412);
+            AddLecturerButton.Margin = new Padding(4);
             AddLecturerButton.Name = "AddLecturerButton";
-            AddLecturerButton.Size = new Size(215, 30);
+            AddLecturerButton.Size = new Size(188, 22);
             AddLecturerButton.TabIndex = 10;
             AddLecturerButton.Text = "Add Lecturer";
             AddLecturerButton.TextAlign = ContentAlignment.MiddleLeft;
             AddLecturerButton.UseVisualStyleBackColor = true;
+            AddLecturerButton.Click += AddLecturerButton_Click;
             // 
             // RemoveLecturerButton
             // 
-            RemoveLecturerButton.Location = new Point(50, 600);
-            RemoveLecturerButton.Margin = new Padding(5);
+            RemoveLecturerButton.Location = new Point(44, 450);
+            RemoveLecturerButton.Margin = new Padding(4);
             RemoveLecturerButton.Name = "RemoveLecturerButton";
-            RemoveLecturerButton.Size = new Size(215, 30);
+            RemoveLecturerButton.Size = new Size(188, 22);
             RemoveLecturerButton.TabIndex = 11;
             RemoveLecturerButton.Text = "Remove Lecturer";
             RemoveLecturerButton.TextAlign = ContentAlignment.MiddleLeft;
             RemoveLecturerButton.UseVisualStyleBackColor = true;
+            RemoveLecturerButton.Click += RemoveLecturerButton_Click;
             // 
             // CustomQueriesButton
             // 
-            CustomQueriesButton.Location = new Point(50, 650);
-            CustomQueriesButton.Margin = new Padding(5);
+            CustomQueriesButton.Location = new Point(44, 488);
+            CustomQueriesButton.Margin = new Padding(4);
             CustomQueriesButton.Name = "CustomQueriesButton";
-            CustomQueriesButton.Size = new Size(215, 30);
+            CustomQueriesButton.Size = new Size(188, 22);
             CustomQueriesButton.TabIndex = 12;
             CustomQueriesButton.Text = "Custom Queries";
             CustomQueriesButton.TextAlign = ContentAlignment.MiddleLeft;
             CustomQueriesButton.UseVisualStyleBackColor = true;
+            CustomQueriesButton.Click += CustomQueriesButton_Click;
             // 
             // DataGridViewMain
             // 
             DataGridViewMain.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridViewMain.Location = new Point(315, 50);
+            DataGridViewMain.Location = new Point(276, 38);
+            DataGridViewMain.Margin = new Padding(3, 2, 3, 2);
             DataGridViewMain.Name = "DataGridViewMain";
             DataGridViewMain.RowHeadersWidth = 51;
-            DataGridViewMain.Size = new Size(825, 630);
+            DataGridViewMain.Size = new Size(722, 472);
             DataGridViewMain.TabIndex = 13;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1218, 724);
+            ClientSize = new Size(1066, 543);
             Controls.Add(DataGridViewMain);
             Controls.Add(CustomQueriesButton);
             Controls.Add(RemoveLecturerButton);
@@ -212,10 +226,11 @@
             Controls.Add(DisplayAverageMarksButton);
             Controls.Add(DisplayFailMarksButton);
             Controls.Add(DisplayLowestMarksButton);
-            Controls.Add(DisplayHighestMarksbutton);
+            Controls.Add(DisplayHighestMarksButton);
             Controls.Add(DisplayAllGradesButton);
             Controls.Add(DisplayAllMarksButton);
             Controls.Add(DisplayCourseDetailsButton);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Project 1 - Ashton Scott";
             ((System.ComponentModel.ISupportInitialize)DataGridViewMain).EndInit();
@@ -227,7 +242,7 @@
         private Button DisplayCourseDetailsButton;
         private Button DisplayAllMarksButton;
         private Button DisplayAllGradesButton;
-        private Button DisplayHighestMarksbutton;
+        private Button DisplayHighestMarksButton;
         private Button DisplayLowestMarksButton;
         private Button DisplayFailMarksButton;
         private Button DisplayAverageMarksButton;

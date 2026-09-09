@@ -11,6 +11,7 @@
         {
             Info,
             Debug,
+            Event,
             Error
         }
 
@@ -20,6 +21,7 @@
             {
                 LogType.Info => "\u001b[32m",
                 LogType.Debug => "\u001b[36m",
+                LogType.Event => "\u001B[33m",
                 LogType.Error => "\u001b[31m",
                 _ => "\u001b[0m",
             };

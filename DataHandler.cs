@@ -46,9 +46,9 @@ namespace WinFormsApp1
                 string[] fields = line.Split(",");
 
                 // Learner fields
-                int id = int.Parse(fields[0]); // Id
-                string firstName = fields[1]; // First Name
-                string lastName = fields[2]; // Last Name
+                int id = int.Parse(fields[0]);          // Id
+                string firstName = fields[1];           // First Name
+                string lastName = fields[2];            // Last Name
                 int courseIndex = int.Parse(fields[3]); // Course Index
 
                 List<int> marks = [];
