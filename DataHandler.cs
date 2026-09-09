@@ -20,6 +20,8 @@
 // │  5 │ Liam        │ Harris     │          2 │   115000 │             1 │
 // └────┴─────────────┴────────────┴────────────┴──────────┴───────────────┘
 
+using static WinFormsApp1.Lecturer;
+
 namespace WinFormsApp1
 {
     internal class DataHandler
@@ -33,7 +35,11 @@ namespace WinFormsApp1
 
         private const string DataPath = @"../../../data/";
 
-        public void LoadLearners()
+        /// <summary>
+        /// Loads the learner.txt file data
+        /// </summary>
+        /// <exception cref="FileNotFoundException"></exception>
+        private void LoadLearnersFile()
         {
             if (!File.Exists(DataPath + "learners.txt"))
             {
@@ -62,11 +68,15 @@ namespace WinFormsApp1
                 CourseAssessmentMark courseAssessmentMark = new(courses[courseIndex], marks);
 
                 // Add Learners to the Learner list
-                learners.Add(new(id, firstName, lastName, courseAssessmentMark));
+                AddLearner(id, firstName, lastName, courseAssessmentMark);
             }
         }
 
-        public void LoadLecturers()
+        /// <summary>
+        /// Loads the lecturer.txt file data
+        /// </summary>
+        /// <exception cref="FileNotFoundException"></exception>
+        private void LoadLecturersFile()
         {
             string filePath = Path.Combine(DataPath, "lecturers.txt");
 
@@ -92,6 +102,33 @@ namespace WinFormsApp1
                 // Add Lecturer to the Lecturer list
                 lecturers.Add(new(id, firstName, lastName, position, salary, courseIndex));
             }
+        }
+
+        /// <summary>
+        /// Load all persistent data saved in files
+        /// </summary>
+        public void LoadFiles()
+        {
+            LoadLearnersFile(); // ./data/learners.txt
+            LoadLecturersFile(); // ./data/lecturers.txt
+        }
+
+        public void AddLearner (int id,
+                                string firstName,
+                                string lastName,
+                                CourseAssessmentMark courseAssessmentMark)
+        {
+            learners.Add(new(id, firstName, lastName, courseAssessmentMark));
+        }
+
+        public void AddLecturer(int id,
+                                string firstName,
+                                string lastName,
+                                EPosition position,
+                                ESalary salary,
+                                int courseIndex)
+        {
+            lecturers.Add(new(id, firstName, lastName, position, salary, courseIndex));
         }
     }
 }

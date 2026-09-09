@@ -10,8 +10,7 @@ namespace WinFormsApp1
 
             try
             {
-                dataHandler.LoadLearners();
-                dataHandler.LoadLecturers();
+                dataHandler.LoadFiles();
             }
             catch (Exception ex)
             {
