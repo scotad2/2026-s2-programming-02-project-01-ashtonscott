@@ -2,28 +2,79 @@ namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
+        private DataHandler _dataHandler = new();
+
+        public void DisplayCourseDetails()
+        {
+            var courseData = _dataHandler.courses.Select(course => new
+            {
+                Institution = course.Department.Institution.Name,
+                Department = course.Department.Name,
+                Code = course.Code,
+                Name = course.Name,
+                Description = course.Description,
+                Credits = course.Credits,
+                Fees = course.Fees
+            }).ToList();
+
+            DataGridViewMain.DataSource = courseData;
+        }
+
+        public void DisplayAllMarks()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DisplayAllGrades()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DisplayHighestMarks()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DisplayLowestMarks()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DisplayFailMarks()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DisplayAverageMarks()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DisplayLecturerDetails()
+        {
+            throw new NotImplementedException();
+        }
+
         public Form1()
         {
             InitializeComponent();
 
-            DataHandler dataHandler = new();
-
             try
             {
-                dataHandler.LoadFiles();
+                _dataHandler.LoadFiles();
             }
             catch (Exception ex)
             {
                 ConsoleDebugger.Log(ex.Message, ConsoleDebugger.LogType.Error);
             }
 
-            foreach (var learner in dataHandler.learners)
+            foreach (var learner in _dataHandler.learners)
             {
                 ConsoleDebugger.Log($"\n{learner.ToString()}", ConsoleDebugger.LogType.Info);
                 Console.WriteLine();
             }
 
-            foreach (var lecturer in dataHandler.lecturers)
+            foreach (var lecturer in _dataHandler.lecturers)
             {
                 ConsoleDebugger.Log($"\n{lecturer.ToString()}", ConsoleDebugger.LogType.Info);
                 Console.WriteLine();
@@ -33,6 +84,7 @@ namespace WinFormsApp1
         private void DisplayCourseDetailsButton_Click(object sender, EventArgs e)
         {
             ConsoleDebugger.Log("'Display Course Details' selected.", ConsoleDebugger.LogType.Event);
+            DisplayCourseDetails();
         }
 
         private void DisplayAllMarksButton_Click(object sender, EventArgs e)
