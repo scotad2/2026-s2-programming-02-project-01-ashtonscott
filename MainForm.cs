@@ -1,6 +1,8 @@
+using static WinFormsApp1.Lecturer;
+
 namespace WinFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private DataHandler _dataHandler = new();
 
@@ -138,7 +140,7 @@ namespace WinFormsApp1
             DataGridViewMain.DataSource = lecturerData;
         }
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
 
@@ -230,6 +232,10 @@ namespace WinFormsApp1
         private void AddLearnerButton_Click(object sender, EventArgs e)
         {
             ConsoleDebugger.Log("'Add Learner' selected.", ConsoleDebugger.LogType.Event);
+
+            AddLearnerForm form = new(_dataHandler);
+
+            form.ShowDialog();
         }
 
         private void AddLecturerButton_Click(object sender, EventArgs e)
@@ -242,9 +248,9 @@ namespace WinFormsApp1
             ConsoleDebugger.Log("'Remove Lecturer' selected.", ConsoleDebugger.LogType.Event);
         }
 
-        private void CustomQueriesButton_Click(object sender, EventArgs e)
+        private void RemoveLearnerButton_Click(object sender, EventArgs e)
         {
-            ConsoleDebugger.Log("'Custom Queries' selected.", ConsoleDebugger.LogType.Event);
+
         }
     }
 }

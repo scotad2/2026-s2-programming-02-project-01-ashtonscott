@@ -68,7 +68,7 @@ namespace WinFormsApp1
                 CourseAssessmentMark courseAssessmentMark = new(courses[courseIndex], marks);
 
                 // Add Learners to the Learner list
-                AddLearner(id, firstName, lastName, courseAssessmentMark);
+                learners.Add(new(id, firstName, lastName, courseAssessmentMark));
             }
         }
 
@@ -113,22 +113,22 @@ namespace WinFormsApp1
             LoadLecturersFile(); // ./data/lecturers.txt
         }
 
-        public void AddLearner (int id,
-                                string firstName,
-                                string lastName,
-                                CourseAssessmentMark courseAssessmentMark)
+        public void AddLearner (int id, string firstName, string lastName, CourseAssessmentMark courseAssessmentMark)
         {
             learners.Add(new(id, firstName, lastName, courseAssessmentMark));
+
+            string dataEntry = $"{id},{firstName},{lastName},{courses.IndexOf(courseAssessmentMark.Course)},{string.Join(",", courseAssessmentMark.GetAllMarks())}";
+
+            File.AppendAllText(DataPath + "learners.txt", "\n" + dataEntry);
         }
 
-        public void AddLecturer(int id,
-                                string firstName,
-                                string lastName,
-                                EPosition position,
-                                ESalary salary,
-                                int courseIndex)
+        public void AddLecturer(int id, string firstName, string lastName, EPosition position, ESalary salary, int courseIndex)
         {
             lecturers.Add(new(id, firstName, lastName, position, salary, courseIndex));
+
+            string dataEntry = $"{id},{firstName},{lastName},{(int)position},{(int)salary},{courseIndex}";
+
+            File.AppendAllText(DataPath + "lecturers.txt", "\n" + dataEntry );
         }
     }
 }
