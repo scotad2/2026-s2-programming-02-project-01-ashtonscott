@@ -36,13 +36,18 @@ namespace WinFormsApp1
 
         public void DisplayAllGrades()
         {
-            var gradeData = _dataHandler.learners.Select(learner => new
+            var gradeData = _dataHandler.learners.Select(learner =>
             {
-                ID = learner.Id,
-                Firstname = learner.FirstName,
-                Lastname = learner.LastName,
-                Course = learner.CourseAssessmentMark.Course.Name,
-                Grades = string.Join(", ", learner.CourseAssessmentMark.GetAllGrades())
+                var grades = learner.CourseAssessmentMark.GetAllGrades();
+
+                return new
+                {
+                    ID = learner.Id,
+                    FirstName = learner.FirstName,
+                    LastName = learner.LastName,
+                    Course = learner.CourseAssessmentMark.Course.Name,
+                    Grades = string.Join(", ", grades.Select(CourseAssessmentMark.GradeToString))
+                };
             }).ToList();
 
             DataGridViewMain.DataSource = gradeData;

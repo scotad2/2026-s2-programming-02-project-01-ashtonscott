@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using static WinFormsApp1.CourseAssessmentMark;
 
 namespace WinFormsApp1
 {
@@ -59,6 +60,25 @@ namespace WinFormsApp1
                 default:
                     return Grade.E;
             }
+        }
+
+        public static string GradeToString(Grade grade)
+        {
+            return grade switch
+            {
+                Grade.APlus => "A+",
+                Grade.A => "A",
+                Grade.AMinus => "A-",
+                Grade.BPlus => "B+",
+                Grade.B => "B",
+                Grade.BMinus => "B-",
+                Grade.CPlus => "C+",
+                Grade.C => "C",
+                Grade.CMinus => "C-",
+                Grade.D => "D",
+                Grade.E => "E",
+                _ => "Unknown"
+            };
         }
 
         public List<int> GetAllMarks()
