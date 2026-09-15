@@ -125,7 +125,17 @@ namespace WinFormsApp1
 
         public void DisplayLecturerDetails()
         {
-            throw new NotImplementedException();
+            var lecturerData = _dataHandler.lecturers.Select(lecturer => new
+            {
+                ID = lecturer.Id,
+                FirstName = lecturer.FirstName,
+                LastName = lecturer.LastName,
+                Position = Lecturer.PositionToString(lecturer.Position),
+                Salary = $"${(int)lecturer.Salary}", // Cast ESalary as an int
+                Course = _dataHandler.courses[lecturer.CourseIndex].Name
+            }).ToList();
+
+            DataGridViewMain.DataSource = lecturerData;
         }
 
         public Form1()

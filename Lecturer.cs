@@ -45,6 +45,19 @@
             ConsoleDebugger.Log($"Added Lecturer '{firstName} {lastName}'");
         }
 
+        public static string PositionToString(EPosition position)
+        {
+            return position switch
+            {
+                EPosition.Lecturer => "Lecturer",
+                EPosition.SeniorLecturer => "Senior Lecturer",
+                EPosition.PrincipalLecturer => "Principal Lecturer",
+                EPosition.AssociateProfessor => "Associate Professor",
+                EPosition.Professor => "Professor",
+                _ => "Unknown"
+            };
+        }
+
         public override string ToString()
         {
             return $"""
