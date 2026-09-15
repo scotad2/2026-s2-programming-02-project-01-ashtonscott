@@ -19,6 +19,14 @@ namespace WinFormsApp1
             InitializeComponent();
 
             _dataHandler = dataHandler;
+
+            CourseComboBox.DataSource = _dataHandler.courses;
+            CourseComboBox.DisplayMember = "Name";
+        }
+
+        private void AddLearnerForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
