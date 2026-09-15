@@ -55,22 +55,72 @@ namespace WinFormsApp1
 
         public void DisplayHighestMarks()
         {
-            throw new NotImplementedException();
+            var highestMarkData = _dataHandler.learners.Select(learner => new
+            {
+                ID = learner.Id,
+                FirstName = learner.FirstName,
+                LastName = learner.LastName,
+                Course = learner.CourseAssessmentMark.Course.Name,
+                Marks = string.Join(", ", learner.CourseAssessmentMark.GetHighestMarks())
+            }).ToList();
+
+            DataGridViewMain.DataSource = highestMarkData;
         }
 
         public void DisplayLowestMarks()
         {
-            throw new NotImplementedException();
+            var lowestMarkData = _dataHandler.learners.Select(learner => new
+            {
+                ID = learner.Id,
+                FirstName = learner.FirstName,
+                LastName = learner.LastName,
+                Course = learner.CourseAssessmentMark.Course.Name,
+                Marks = string.Join(", ", learner.CourseAssessmentMark.GetLowestMarks())
+            }).ToList();
+
+            DataGridViewMain.DataSource = lowestMarkData;
         }
 
         public void DisplayFailMarks()
         {
-            throw new NotImplementedException();
+            var failMarkData = _dataHandler.learners.Select(learner => new
+            {
+                ID = learner.Id,
+                FirstName = learner.FirstName,
+                LastName = learner.LastName,
+                Course = learner.CourseAssessmentMark.Course.Name,
+                Marks = string.Join(", ", learner.CourseAssessmentMark.GetFailMarks())
+            }).ToList();
+
+            DataGridViewMain.DataSource = failMarkData;
         }
 
         public void DisplayAverageMarks()
         {
-            throw new NotImplementedException();
+            var averageMarkData = _dataHandler.learners.Select(learner => new
+            {
+                ID = learner.Id,
+                FirstName = learner.FirstName,
+                LastName = learner.LastName,
+                Course = learner.CourseAssessmentMark.Course.Name,
+                Marks = string.Join(", ", learner.CourseAssessmentMark.GetAverageMark())
+            }).ToList();
+
+            DataGridViewMain.DataSource = averageMarkData;
+        }
+
+        public void DisplayAverageGrades()
+        {
+            var averageGradeData = _dataHandler.learners.Select(learner => new
+            {
+                ID = learner.Id,
+                FirstName = learner.FirstName,
+                LastName = learner.LastName,
+                Course = learner.CourseAssessmentMark.Course.Name,
+                AverageGrade = CourseAssessmentMark.GradeToString(learner.CourseAssessmentMark.GetAverageGrade())
+            }).ToList();
+
+            DataGridViewMain.DataSource = averageGradeData;
         }
 
         public void DisplayLecturerDetails()
@@ -107,49 +157,64 @@ namespace WinFormsApp1
         private void DisplayCourseDetailsButton_Click(object sender, EventArgs e)
         {
             ConsoleDebugger.Log("'Display Course Details' selected.", ConsoleDebugger.LogType.Event);
+
             DisplayCourseDetails();
         }
 
         private void DisplayAllMarksButton_Click(object sender, EventArgs e)
         {
             ConsoleDebugger.Log("'Display All Marks' selected.", ConsoleDebugger.LogType.Event);
+
             DisplayAllMarks();
         }
 
         private void DisplayAllGradesButton_Click(object sender, EventArgs e)
         {
             ConsoleDebugger.Log("'Display All Grades' selected.", ConsoleDebugger.LogType.Event);
+
             DisplayAllGrades();
         }
 
         private void DisplayHighestMarksButton_Click(object sender, EventArgs e)
         {
             ConsoleDebugger.Log("'Display Highest Marks' selected.", ConsoleDebugger.LogType.Event);
+
+            DisplayHighestMarks();
         }
 
         private void DisplayLowestMarksButton_Click(object sender, EventArgs e)
         {
             ConsoleDebugger.Log("'Display Lowest Marks' selected.", ConsoleDebugger.LogType.Event);
+
+            DisplayLowestMarks();
         }
 
         private void DisplayFailMarksButton_Click(object sender, EventArgs e)
         {
             ConsoleDebugger.Log("'Display Fail Marks' selected.", ConsoleDebugger.LogType.Event);
+
+            DisplayFailMarks();
         }
 
         private void DisplayAverageMarksButton_Click(object sender, EventArgs e)
         {
             ConsoleDebugger.Log("'Display Average Marks' selected.", ConsoleDebugger.LogType.Event);
+
+            DisplayAverageMarks();
         }
 
         private void DisplayAverageGradesButton_Click(object sender, EventArgs e)
         {
             ConsoleDebugger.Log("'Display Average Grades' selected.", ConsoleDebugger.LogType.Event);
+
+            DisplayAverageGrades();
         }
 
         private void DisplayLecturerDetailsButton_Click(object sender, EventArgs e)
         {
             ConsoleDebugger.Log("'Display Lecturer Details' selected.", ConsoleDebugger.LogType.Event);
+
+            DisplayLecturerDetails();
         }
 
         private void AddLearnerButton_Click(object sender, EventArgs e)
