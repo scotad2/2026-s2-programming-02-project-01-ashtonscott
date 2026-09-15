@@ -22,12 +22,30 @@ namespace WinFormsApp1
 
         public void DisplayAllMarks()
         {
-            throw new NotImplementedException();
+            var markData = _dataHandler.learners.Select(learner => new
+            {
+                ID = learner.Id,
+                FirstName = learner.FirstName,
+                LastName = learner.LastName,
+                Course = learner.CourseAssessmentMark.Course.Name,
+                Marks = string.Join(", ", learner.CourseAssessmentMark.GetAllMarks())
+            }).ToList();
+
+            DataGridViewMain.DataSource = markData;
         }
 
         public void DisplayAllGrades()
         {
-            throw new NotImplementedException();
+            var gradeData = _dataHandler.learners.Select(learner => new
+            {
+                ID = learner.Id,
+                Firstname = learner.FirstName,
+                Lastname = learner.LastName,
+                Course = learner.CourseAssessmentMark.Course.Name,
+                Grades = string.Join(", ", learner.CourseAssessmentMark.GetAllGrades())
+            }).ToList();
+
+            DataGridViewMain.DataSource = gradeData;
         }
 
         public void DisplayHighestMarks()
@@ -90,11 +108,13 @@ namespace WinFormsApp1
         private void DisplayAllMarksButton_Click(object sender, EventArgs e)
         {
             ConsoleDebugger.Log("'Display All Marks' selected.", ConsoleDebugger.LogType.Event);
+            DisplayAllMarks();
         }
 
         private void DisplayAllGradesButton_Click(object sender, EventArgs e)
         {
             ConsoleDebugger.Log("'Display All Grades' selected.", ConsoleDebugger.LogType.Event);
+            DisplayAllGrades();
         }
 
         private void DisplayHighestMarksButton_Click(object sender, EventArgs e)

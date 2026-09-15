@@ -208,14 +208,14 @@
             DataGridViewMain.Margin = new Padding(3, 2, 3, 2);
             DataGridViewMain.Name = "DataGridViewMain";
             DataGridViewMain.RowHeadersWidth = 51;
-            DataGridViewMain.Size = new Size(722, 472);
+            DataGridViewMain.Size = new Size(800, 472);
             DataGridViewMain.TabIndex = 13;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1066, 543);
+            ClientSize = new Size(1133, 641);
             Controls.Add(DataGridViewMain);
             Controls.Add(CustomQueriesButton);
             Controls.Add(RemoveLecturerButton);
