@@ -28,12 +28,142 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            CourseComboBox = new ComboBox();
+            LastNameTextBox = new TextBox();
+            FirstNameTextBox = new TextBox();
+            PositionComboBox = new ComboBox();
+            button1 = new Button();
+            button2 = new Button();
+            label4 = new Label();
+            SuspendLayout();
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(12, 131);
+            label3.Name = "label3";
+            label3.Size = new Size(44, 15);
+            label3.TabIndex = 16;
+            label3.Text = "Course";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(12, 70);
+            label2.Name = "label2";
+            label2.Size = new Size(63, 15);
+            label2.TabIndex = 15;
+            label2.Text = "Last Name";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 28);
+            label1.Name = "label1";
+            label1.Size = new Size(64, 15);
+            label1.TabIndex = 14;
+            label1.Text = "First Name";
+            // 
+            // CourseComboBox
+            // 
+            CourseComboBox.FormattingEnabled = true;
+            CourseComboBox.Location = new Point(12, 151);
+            CourseComboBox.Margin = new Padding(3, 2, 3, 2);
+            CourseComboBox.Name = "CourseComboBox";
+            CourseComboBox.Size = new Size(218, 23);
+            CourseComboBox.TabIndex = 13;
+            // 
+            // LastNameTextBox
+            // 
+            LastNameTextBox.Location = new Point(12, 87);
+            LastNameTextBox.Margin = new Padding(3, 2, 3, 2);
+            LastNameTextBox.Name = "LastNameTextBox";
+            LastNameTextBox.Size = new Size(298, 23);
+            LastNameTextBox.TabIndex = 12;
+            // 
+            // FirstNameTextBox
+            // 
+            FirstNameTextBox.Location = new Point(12, 45);
+            FirstNameTextBox.Margin = new Padding(3, 2, 3, 2);
+            FirstNameTextBox.Name = "FirstNameTextBox";
+            FirstNameTextBox.Size = new Size(298, 23);
+            FirstNameTextBox.TabIndex = 11;
+            // 
+            // PositionComboBox
+            // 
+            PositionComboBox.FormattingEnabled = true;
+            PositionComboBox.Location = new Point(12, 193);
+            PositionComboBox.Margin = new Padding(3, 2, 3, 2);
+            PositionComboBox.Name = "PositionComboBox";
+            PositionComboBox.Size = new Size(218, 23);
+            PositionComboBox.TabIndex = 17;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Transparent;
+            button1.Location = new Point(263, 194);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(82, 22);
+            button1.TabIndex = 20;
+            button1.Text = "Cancel";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.LimeGreen;
+            button2.Location = new Point(263, 168);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(82, 22);
+            button2.TabIndex = 19;
+            button2.Text = "Add";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(12, 176);
+            label4.Name = "label4";
+            label4.Size = new Size(50, 15);
+            label4.TabIndex = 21;
+            label4.Text = "Position";
+            // 
+            // AddLecturerForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(364, 241);
+            Controls.Add(label4);
+            Controls.Add(button1);
+            Controls.Add(button2);
+            Controls.Add(PositionComboBox);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(CourseComboBox);
+            Controls.Add(LastNameTextBox);
+            Controls.Add(FirstNameTextBox);
+            Name = "AddLecturerForm";
+            Text = "Add Lecturer";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private ComboBox CourseComboBox;
+        private TextBox LastNameTextBox;
+        private TextBox FirstNameTextBox;
+        private ComboBox PositionComboBox;
+        private Button button1;
+        private Button button2;
+        private Label label4;
     }
 }

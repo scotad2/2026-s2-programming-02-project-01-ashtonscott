@@ -243,6 +243,8 @@ namespace WinFormsApp1
             ConsoleDebugger.Log("'Add Lecturer' selected.", ConsoleDebugger.LogType.Event);
 
             AddLecturerForm form = new(_dataHandler);
+
+            form.ShowDialog();
         }
 
         private void RemoveLecturerButton_Click(object sender, EventArgs e)
