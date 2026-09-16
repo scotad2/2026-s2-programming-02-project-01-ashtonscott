@@ -5,6 +5,9 @@
     /// </summary>
     internal class Lecturer : Person
     {
+        /// <summary>
+        /// Lecturer position
+        /// </summary>
         public enum EPosition
         {
             Lecturer,
@@ -14,6 +17,9 @@
             Professor
         }
 
+        /// <summary>
+        /// Lecturer salary
+        /// </summary>
         public enum ESalary
         {
             LecturerSalary = 85000,
@@ -27,6 +33,15 @@
         public ESalary Salary { get; }
         public int CourseIndex { get; }
 
+        /// <summary>
+        /// Create a new Lecturer object.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <param name="position"></param>
+        /// <param name="salary"></param>
+        /// <param name="courseIndex"></param>
         public Lecturer(
             int id,
             string firstName,
@@ -45,6 +60,11 @@
             ConsoleDebugger.Log($"Added Lecturer '{firstName} {lastName}'");
         }
 
+        /// <summary>
+        /// Convert EPosition to string for formatting.
+        /// </summary>
+        /// <param name="position"></param>
+        /// <returns></returns>
         public static string PositionToString(EPosition position)
         {
             return position switch

@@ -5,6 +5,9 @@
     /// </summary>
     internal static class ConsoleDebugger
     {
+        /// <summary>
+        /// Determines if the Console Debugger is enabled.
+        /// </summary>
         public static bool Enabled { get; set; } = true;
 
         public enum LogType
@@ -15,6 +18,11 @@
             Error
         }
 
+        /// <summary>
+        /// Get ANSI color code for LogType
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
         private static string GetColour(LogType type)
         {
             return type switch

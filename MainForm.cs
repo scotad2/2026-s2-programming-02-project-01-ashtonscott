@@ -6,6 +6,9 @@ namespace WinFormsApp1
     {
         private DataHandler _dataHandler = new();
 
+        /// <summary>
+        /// Display all course details to the main data grid.
+        /// </summary>
         public void DisplayCourseDetails()
         {
             var courseData = _dataHandler.courses.Select(course => new
@@ -22,6 +25,9 @@ namespace WinFormsApp1
             DataGridViewMain.DataSource = courseData;
         }
 
+        /// <summary>
+        /// Display all marks to the main data grid.
+        /// </summary>
         public void DisplayAllMarks()
         {
             var markData = _dataHandler.learners.Select(learner => new
@@ -36,6 +42,9 @@ namespace WinFormsApp1
             DataGridViewMain.DataSource = markData;
         }
 
+        /// <summary>
+        /// Display all grades to the main data grid.
+        /// </summary>
         public void DisplayAllGrades()
         {
             var gradeData = _dataHandler.learners.Select(learner =>
@@ -55,6 +64,9 @@ namespace WinFormsApp1
             DataGridViewMain.DataSource = gradeData;
         }
 
+        /// <summary>
+        /// Display highest marks to the main data grid.
+        /// </summary>
         public void DisplayHighestMarks()
         {
             var highestMarkData = _dataHandler.learners.Select(learner => new
@@ -69,6 +81,9 @@ namespace WinFormsApp1
             DataGridViewMain.DataSource = highestMarkData;
         }
 
+        /// <summary>
+        /// Display lowest marks to the main data grid.
+        /// </summary>
         public void DisplayLowestMarks()
         {
             var lowestMarkData = _dataHandler.learners.Select(learner => new
@@ -83,6 +98,9 @@ namespace WinFormsApp1
             DataGridViewMain.DataSource = lowestMarkData;
         }
 
+        /// <summary>
+        /// Display fail marks to the main data grid.
+        /// </summary>
         public void DisplayFailMarks()
         {
             var failMarkData = _dataHandler.learners.Select(learner => new
@@ -97,6 +115,9 @@ namespace WinFormsApp1
             DataGridViewMain.DataSource = failMarkData;
         }
 
+        /// <summary>
+        /// Display average marks to the main data grid.
+        /// </summary>
         public void DisplayAverageMarks()
         {
             var averageMarkData = _dataHandler.learners.Select(learner => new
@@ -111,6 +132,9 @@ namespace WinFormsApp1
             DataGridViewMain.DataSource = averageMarkData;
         }
 
+        /// <summary>
+        /// Display average grades to the main data grid.
+        /// </summary>
         public void DisplayAverageGrades()
         {
             var averageGradeData = _dataHandler.learners.Select(learner => new
@@ -125,6 +149,9 @@ namespace WinFormsApp1
             DataGridViewMain.DataSource = averageGradeData;
         }
 
+        /// <summary>
+        /// Displays lecturer details to the main data grid.
+        /// </summary>
         public void DisplayLecturerDetails()
         {
             var lecturerData = _dataHandler.lecturers.Select(lecturer => new

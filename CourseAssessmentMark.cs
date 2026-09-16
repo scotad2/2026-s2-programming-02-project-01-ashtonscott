@@ -3,11 +3,19 @@ using static WinFormsApp1.CourseAssessmentMark;
 
 namespace WinFormsApp1
 {
+    /// <summary>
+    /// Represents a learner's given marks for a course.
+    /// </summary>
+    /// <param name="course"></param>
+    /// <param name="marks"></param>
     internal class CourseAssessmentMark(Course course, List<int> marks)
     {
         public Course Course { get; set; } = course;
         private List<int> _marks = marks;
 
+        /// <summary>
+        /// Grade enum representing all possible grades.
+        /// </summary>
         public enum Grade
         {
             APlus,
@@ -23,6 +31,11 @@ namespace WinFormsApp1
             E,
         }
 
+        /// <summary>
+        /// Get the equivalent grade of a mark.
+        /// </summary>
+        /// <param name="mark"></param>
+        /// <returns></returns>
         private Grade GetGrade(int mark)
         {
             switch (mark)
@@ -62,6 +75,11 @@ namespace WinFormsApp1
             }
         }
 
+        /// <summary>
+        /// Convert Grade to string for formatting.
+        /// </summary>
+        /// <param name="grade"></param>
+        /// <returns></returns>
         public static string GradeToString(Grade grade)
         {
             return grade switch
@@ -81,11 +99,19 @@ namespace WinFormsApp1
             };
         }
 
+        /// <summary>
+        /// Returns all marks.
+        /// </summary>
+        /// <returns></returns>
         public List<int> GetAllMarks()
         {
             return _marks;
         }
 
+        /// <summary>
+        /// Returns all grades.
+        /// </summary>
+        /// <returns></returns>
         public List<Grade> GetAllGrades()
         {
             List<Grade> grades = [];
@@ -99,18 +125,30 @@ namespace WinFormsApp1
             return grades;
         }
 
+        /// <summary>
+        /// Returns all highest marks.
+        /// </summary>
+        /// <returns></returns>
         public List<int> GetHighestMarks()
         {
             int maxValue = _marks.Max();
             return _marks.Where(n => n == maxValue).ToList();
         }
 
+        /// <summary>
+        /// Return all lowest marks.
+        /// </summary>
+        /// <returns></returns>
         public List<int> GetLowestMarks()
         {
             int minValue = _marks.Min();
             return _marks.Where(n => n == minValue).ToList();
         }
 
+        /// <summary>
+        /// Return all fail marks.
+        /// </summary>
+        /// <returns></returns>
         public List<int> GetFailMarks()
         {
             List<int> failMarks = [];
@@ -126,11 +164,19 @@ namespace WinFormsApp1
             return failMarks;
         }
 
+        /// <summary>
+        /// Return the average mark.
+        /// </summary>
+        /// <returns></returns>
         public double GetAverageMark()
         {
             return _marks.Average();
         }
 
+        /// <summary>
+        /// Return the average grade.
+        /// </summary>
+        /// <returns></returns>
         public Grade GetAverageGrade() 
         { 
             double averageMark = GetAverageMark(); 
