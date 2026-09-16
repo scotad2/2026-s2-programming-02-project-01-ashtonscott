@@ -1,4 +1,8 @@
-﻿// learners.txt
+﻿// BELOW IS A REFERENCE AS TO WHAT THE DATA SHOULD LOOK LIKE.
+
+// MAKE SURE IT LOOKS LIKE THIS.
+
+// learners.txt
 // ┌────┬─────────────┬────────────┬───────────────┬───────────────────┐
 // │ ID │  First Name │  Last Name │  Course Index │  Assessment Marks │
 // ├────┼─────────────┼────────────┼───────────────┼───────────────────┤
@@ -24,6 +28,9 @@ using static WinFormsApp1.Lecturer;
 
 namespace WinFormsApp1
 {
+    /// <summary>
+    /// Handles all persistent program data.
+    /// </summary>
     internal class DataHandler
     {
         public List<Institution> institutions = Seeder.SeedInstitution();
@@ -105,7 +112,7 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Load all persistent data saved in files
+        /// Load all persistent data saved in files.
         /// </summary>
         public void LoadFiles()
         {
