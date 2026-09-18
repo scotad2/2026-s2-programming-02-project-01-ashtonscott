@@ -41,16 +41,15 @@
             AddLecturerButton = new Button();
             RemoveLecturerButton = new Button();
             DataGridViewMain = new DataGridView();
-            RemoveLearnerButton = new Button();
             ((System.ComponentModel.ISupportInitialize)DataGridViewMain).BeginInit();
             SuspendLayout();
             // 
             // DisplayCourseDetailsButton
             // 
-            DisplayCourseDetailsButton.Location = new Point(15, 17);
-            DisplayCourseDetailsButton.Margin = new Padding(5, 5, 5, 5);
+            DisplayCourseDetailsButton.Location = new Point(13, 13);
+            DisplayCourseDetailsButton.Margin = new Padding(4, 4, 4, 4);
             DisplayCourseDetailsButton.Name = "DisplayCourseDetailsButton";
-            DisplayCourseDetailsButton.Size = new Size(215, 29);
+            DisplayCourseDetailsButton.Size = new Size(188, 22);
             DisplayCourseDetailsButton.TabIndex = 0;
             DisplayCourseDetailsButton.Text = "Display Course Details";
             DisplayCourseDetailsButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -59,10 +58,10 @@
             // 
             // DisplayAllMarksButton
             // 
-            DisplayAllMarksButton.Location = new Point(15, 67);
-            DisplayAllMarksButton.Margin = new Padding(5, 5, 5, 5);
+            DisplayAllMarksButton.Location = new Point(13, 50);
+            DisplayAllMarksButton.Margin = new Padding(4, 4, 4, 4);
             DisplayAllMarksButton.Name = "DisplayAllMarksButton";
-            DisplayAllMarksButton.Size = new Size(215, 29);
+            DisplayAllMarksButton.Size = new Size(188, 22);
             DisplayAllMarksButton.TabIndex = 1;
             DisplayAllMarksButton.Text = "Display All Marks";
             DisplayAllMarksButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -71,10 +70,10 @@
             // 
             // DisplayAllGradesButton
             // 
-            DisplayAllGradesButton.Location = new Point(15, 116);
-            DisplayAllGradesButton.Margin = new Padding(5, 5, 5, 5);
+            DisplayAllGradesButton.Location = new Point(13, 87);
+            DisplayAllGradesButton.Margin = new Padding(4, 4, 4, 4);
             DisplayAllGradesButton.Name = "DisplayAllGradesButton";
-            DisplayAllGradesButton.Size = new Size(215, 29);
+            DisplayAllGradesButton.Size = new Size(188, 22);
             DisplayAllGradesButton.TabIndex = 2;
             DisplayAllGradesButton.Text = "Display All Grades";
             DisplayAllGradesButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -83,10 +82,10 @@
             // 
             // DisplayHighestMarksButton
             // 
-            DisplayHighestMarksButton.Location = new Point(15, 167);
-            DisplayHighestMarksButton.Margin = new Padding(5, 5, 5, 5);
+            DisplayHighestMarksButton.Location = new Point(13, 125);
+            DisplayHighestMarksButton.Margin = new Padding(4, 4, 4, 4);
             DisplayHighestMarksButton.Name = "DisplayHighestMarksButton";
-            DisplayHighestMarksButton.Size = new Size(215, 29);
+            DisplayHighestMarksButton.Size = new Size(188, 22);
             DisplayHighestMarksButton.TabIndex = 3;
             DisplayHighestMarksButton.Text = "Display Highest Marks";
             DisplayHighestMarksButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -95,10 +94,10 @@
             // 
             // DisplayLowestMarksButton
             // 
-            DisplayLowestMarksButton.Location = new Point(15, 217);
-            DisplayLowestMarksButton.Margin = new Padding(5, 5, 5, 5);
+            DisplayLowestMarksButton.Location = new Point(13, 163);
+            DisplayLowestMarksButton.Margin = new Padding(4, 4, 4, 4);
             DisplayLowestMarksButton.Name = "DisplayLowestMarksButton";
-            DisplayLowestMarksButton.Size = new Size(215, 29);
+            DisplayLowestMarksButton.Size = new Size(188, 22);
             DisplayLowestMarksButton.TabIndex = 4;
             DisplayLowestMarksButton.Text = "Display Lowest Marks";
             DisplayLowestMarksButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -107,10 +106,10 @@
             // 
             // DisplayFailMarksButton
             // 
-            DisplayFailMarksButton.Location = new Point(15, 267);
-            DisplayFailMarksButton.Margin = new Padding(5, 5, 5, 5);
+            DisplayFailMarksButton.Location = new Point(13, 200);
+            DisplayFailMarksButton.Margin = new Padding(4, 4, 4, 4);
             DisplayFailMarksButton.Name = "DisplayFailMarksButton";
-            DisplayFailMarksButton.Size = new Size(215, 29);
+            DisplayFailMarksButton.Size = new Size(188, 22);
             DisplayFailMarksButton.TabIndex = 5;
             DisplayFailMarksButton.Text = "Display Fail Marks";
             DisplayFailMarksButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -119,10 +118,10 @@
             // 
             // DisplayAverageMarksButton
             // 
-            DisplayAverageMarksButton.Location = new Point(15, 316);
-            DisplayAverageMarksButton.Margin = new Padding(5, 5, 5, 5);
+            DisplayAverageMarksButton.Location = new Point(13, 237);
+            DisplayAverageMarksButton.Margin = new Padding(4, 4, 4, 4);
             DisplayAverageMarksButton.Name = "DisplayAverageMarksButton";
-            DisplayAverageMarksButton.Size = new Size(215, 29);
+            DisplayAverageMarksButton.Size = new Size(188, 22);
             DisplayAverageMarksButton.TabIndex = 6;
             DisplayAverageMarksButton.Text = "Display Average Marks";
             DisplayAverageMarksButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -131,10 +130,10 @@
             // 
             // DisplayAverageGradesButton
             // 
-            DisplayAverageGradesButton.Location = new Point(15, 367);
-            DisplayAverageGradesButton.Margin = new Padding(5, 5, 5, 5);
+            DisplayAverageGradesButton.Location = new Point(13, 275);
+            DisplayAverageGradesButton.Margin = new Padding(4, 4, 4, 4);
             DisplayAverageGradesButton.Name = "DisplayAverageGradesButton";
-            DisplayAverageGradesButton.Size = new Size(215, 29);
+            DisplayAverageGradesButton.Size = new Size(188, 22);
             DisplayAverageGradesButton.TabIndex = 7;
             DisplayAverageGradesButton.Text = "Display Average Grades";
             DisplayAverageGradesButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -143,10 +142,10 @@
             // 
             // DisplayLecturerDetailsButton
             // 
-            DisplayLecturerDetailsButton.Location = new Point(15, 417);
-            DisplayLecturerDetailsButton.Margin = new Padding(5, 5, 5, 5);
+            DisplayLecturerDetailsButton.Location = new Point(13, 313);
+            DisplayLecturerDetailsButton.Margin = new Padding(4, 4, 4, 4);
             DisplayLecturerDetailsButton.Name = "DisplayLecturerDetailsButton";
-            DisplayLecturerDetailsButton.Size = new Size(215, 29);
+            DisplayLecturerDetailsButton.Size = new Size(188, 22);
             DisplayLecturerDetailsButton.TabIndex = 8;
             DisplayLecturerDetailsButton.Text = "Display Lecturer Details";
             DisplayLecturerDetailsButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -155,10 +154,10 @@
             // 
             // AddLearnerButton
             // 
-            AddLearnerButton.Location = new Point(477, 669);
-            AddLearnerButton.Margin = new Padding(5, 5, 5, 5);
+            AddLearnerButton.Location = new Point(417, 502);
+            AddLearnerButton.Margin = new Padding(4, 4, 4, 4);
             AddLearnerButton.Name = "AddLearnerButton";
-            AddLearnerButton.Size = new Size(215, 29);
+            AddLearnerButton.Size = new Size(188, 22);
             AddLearnerButton.TabIndex = 9;
             AddLearnerButton.Text = "Add Learner";
             AddLearnerButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -167,10 +166,10 @@
             // 
             // AddLecturerButton
             // 
-            AddLecturerButton.Location = new Point(253, 669);
-            AddLecturerButton.Margin = new Padding(5, 5, 5, 5);
+            AddLecturerButton.Location = new Point(221, 502);
+            AddLecturerButton.Margin = new Padding(4, 4, 4, 4);
             AddLecturerButton.Name = "AddLecturerButton";
-            AddLecturerButton.Size = new Size(215, 29);
+            AddLecturerButton.Size = new Size(188, 22);
             AddLecturerButton.TabIndex = 10;
             AddLecturerButton.Text = "Add Lecturer";
             AddLecturerButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -179,10 +178,10 @@
             // 
             // RemoveLecturerButton
             // 
-            RemoveLecturerButton.Location = new Point(253, 709);
-            RemoveLecturerButton.Margin = new Padding(5, 5, 5, 5);
+            RemoveLecturerButton.Location = new Point(221, 532);
+            RemoveLecturerButton.Margin = new Padding(4, 4, 4, 4);
             RemoveLecturerButton.Name = "RemoveLecturerButton";
-            RemoveLecturerButton.Size = new Size(215, 29);
+            RemoveLecturerButton.Size = new Size(188, 22);
             RemoveLecturerButton.TabIndex = 11;
             RemoveLecturerButton.Text = "Remove Lecturer";
             RemoveLecturerButton.TextAlign = ContentAlignment.MiddleLeft;
@@ -192,30 +191,18 @@
             // DataGridViewMain
             // 
             DataGridViewMain.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridViewMain.Location = new Point(253, 17);
+            DataGridViewMain.Location = new Point(221, 13);
+            DataGridViewMain.Margin = new Padding(3, 2, 3, 2);
             DataGridViewMain.Name = "DataGridViewMain";
             DataGridViewMain.RowHeadersWidth = 51;
-            DataGridViewMain.Size = new Size(914, 629);
+            DataGridViewMain.Size = new Size(800, 472);
             DataGridViewMain.TabIndex = 13;
             // 
-            // RemoveLearnerButton
+            // MainForm
             // 
-            RemoveLearnerButton.Location = new Point(477, 709);
-            RemoveLearnerButton.Margin = new Padding(5, 5, 5, 5);
-            RemoveLearnerButton.Name = "RemoveLearnerButton";
-            RemoveLearnerButton.Size = new Size(215, 29);
-            RemoveLearnerButton.TabIndex = 14;
-            RemoveLearnerButton.Text = "Remove Learner";
-            RemoveLearnerButton.TextAlign = ContentAlignment.MiddleLeft;
-            RemoveLearnerButton.UseVisualStyleBackColor = true;
-            RemoveLearnerButton.Click += RemoveLearnerButton_Click;
-            // 
-            // Form1
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1189, 755);
-            Controls.Add(RemoveLearnerButton);
+            ClientSize = new Size(1040, 566);
             Controls.Add(DataGridViewMain);
             Controls.Add(RemoveLecturerButton);
             Controls.Add(AddLecturerButton);
@@ -229,7 +216,8 @@
             Controls.Add(DisplayAllGradesButton);
             Controls.Add(DisplayAllMarksButton);
             Controls.Add(DisplayCourseDetailsButton);
-            Name = "Form1";
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "MainForm";
             Text = "Project 1 - Ashton Scott";
             ((System.ComponentModel.ISupportInitialize)DataGridViewMain).EndInit();
             ResumeLayout(false);
@@ -250,6 +238,5 @@
         private Button AddLecturerButton;
         private Button RemoveLecturerButton;
         private DataGridView DataGridViewMain;
-        private Button RemoveLearnerButton;
     }
 }

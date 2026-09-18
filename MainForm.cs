@@ -278,10 +278,5 @@ namespace WinFormsApp1
         {
             ConsoleDebugger.Log("'Remove Lecturer' selected.", ConsoleDebugger.LogType.Event);
         }
-
-        private void RemoveLearnerButton_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
