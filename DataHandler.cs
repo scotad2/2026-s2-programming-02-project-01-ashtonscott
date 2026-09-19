@@ -120,8 +120,12 @@ namespace WinFormsApp1
             LoadLecturersFile(); // ./data/lecturers.txt
         }
 
-        public void AddLearner (int id, string firstName, string lastName, CourseAssessmentMark courseAssessmentMark)
+        public void AddLearner (string firstName, string lastName, int courseIndex, List<int> marks)
         {
+            int id = learners.Count + 1;
+
+            CourseAssessmentMark courseAssessmentMark = new(courses[courseIndex], marks);
+
             learners.Add(new(id, firstName, lastName, courseAssessmentMark));
 
             string dataEntry = $"{id},{firstName},{lastName},{courses.IndexOf(courseAssessmentMark.Course)},{string.Join(",", courseAssessmentMark.GetAllMarks())}";
@@ -129,8 +133,10 @@ namespace WinFormsApp1
             File.AppendAllText(DataPath + "learners.txt", "\n" + dataEntry);
         }
 
-        public void AddLecturer(int id, string firstName, string lastName, EPosition position, ESalary salary, int courseIndex)
+        public void AddLecturer(string firstName, string lastName, EPosition position, ESalary salary, int courseIndex)
         {
+            int id = lecturers.Count + 1;
+
             lecturers.Add(new(id, firstName, lastName, position, salary, courseIndex));
 
             string dataEntry = $"{id},{firstName},{lastName},{(int)position},{(int)salary},{courseIndex}";

@@ -78,6 +78,7 @@
             // 
             Mark1.Location = new Point(355, 44);
             Mark1.Margin = new Padding(3, 2, 3, 2);
+            Mark1.MaxLength = 3;
             Mark1.Name = "Mark1";
             Mark1.Size = new Size(44, 23);
             Mark1.TabIndex = 3;
@@ -205,6 +206,7 @@
             AddButton.TabIndex = 17;
             AddButton.Text = "Add";
             AddButton.UseVisualStyleBackColor = false;
+            AddButton.Click += AddButton_Click;
             // 
             // CancelButton
             // 
@@ -216,6 +218,7 @@
             CancelButton.TabIndex = 18;
             CancelButton.Text = "Cancel";
             CancelButton.UseVisualStyleBackColor = false;
+            CancelButton.Click += CancelButton_Click;
             // 
             // AddLearnerForm
             // 
