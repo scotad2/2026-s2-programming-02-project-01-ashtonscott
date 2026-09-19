@@ -23,8 +23,20 @@ namespace WinFormsApp1
             CourseComboBox.DataSource = _dataHandler.courses;
             CourseComboBox.DisplayMember = "Name";
 
-            //PositionComboBox.DataSource = ;
-            //PositionComboBox.DisplayMember = "Position";
+            PositionComboBox.DataSource = Enum.GetValues<Lecturer.EPosition>().Select(Lecturer.PositionToString).ToList();
+        }
+
+        private void AddLecturerForm_Load(object sender, EventArgs e)
+        {
+            Lecturer.EPosition position = (Lecturer.EPosition)PositionComboBox.SelectedIndex;
+            int courseIndex = CourseComboBox.SelectedIndex;
+
+            _dataHandler.AddLecturer(FirstNameTextBox, LastNameTextBox, );
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

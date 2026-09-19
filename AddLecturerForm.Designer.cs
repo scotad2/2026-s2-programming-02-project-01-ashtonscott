@@ -35,8 +35,8 @@
             LastNameTextBox = new TextBox();
             FirstNameTextBox = new TextBox();
             PositionComboBox = new ComboBox();
-            button1 = new Button();
-            button2 = new Button();
+            CancelButton = new Button();
+            AddButton = new Button();
             label4 = new Label();
             SuspendLayout();
             // 
@@ -101,27 +101,28 @@
             PositionComboBox.Size = new Size(218, 23);
             PositionComboBox.TabIndex = 17;
             // 
-            // button1
+            // CancelButton
             // 
-            button1.BackColor = Color.Transparent;
-            button1.Location = new Point(263, 194);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(82, 22);
-            button1.TabIndex = 20;
-            button1.Text = "Cancel";
-            button1.UseVisualStyleBackColor = false;
+            CancelButton.BackColor = Color.Transparent;
+            CancelButton.Location = new Point(263, 194);
+            CancelButton.Margin = new Padding(3, 2, 3, 2);
+            CancelButton.Name = "CancelButton";
+            CancelButton.Size = new Size(82, 22);
+            CancelButton.TabIndex = 20;
+            CancelButton.Text = "Cancel";
+            CancelButton.UseVisualStyleBackColor = false;
+            CancelButton.Click += CancelButton_Click;
             // 
-            // button2
+            // AddButton
             // 
-            button2.BackColor = Color.LimeGreen;
-            button2.Location = new Point(263, 168);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(82, 22);
-            button2.TabIndex = 19;
-            button2.Text = "Add";
-            button2.UseVisualStyleBackColor = false;
+            AddButton.BackColor = Color.LimeGreen;
+            AddButton.Location = new Point(263, 168);
+            AddButton.Margin = new Padding(3, 2, 3, 2);
+            AddButton.Name = "AddButton";
+            AddButton.Size = new Size(82, 22);
+            AddButton.TabIndex = 19;
+            AddButton.Text = "Add";
+            AddButton.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -138,8 +139,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(364, 241);
             Controls.Add(label4);
-            Controls.Add(button1);
-            Controls.Add(button2);
+            Controls.Add(CancelButton);
+            Controls.Add(AddButton);
             Controls.Add(PositionComboBox);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -149,6 +150,7 @@
             Controls.Add(FirstNameTextBox);
             Name = "AddLecturerForm";
             Text = "Add Lecturer";
+            Load += AddLecturerForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -162,8 +164,8 @@
         private TextBox LastNameTextBox;
         private TextBox FirstNameTextBox;
         private ComboBox PositionComboBox;
-        private Button button1;
-        private Button button2;
+        private Button CancelButton;
+        private Button AddButton;
         private Label label4;
     }
 }

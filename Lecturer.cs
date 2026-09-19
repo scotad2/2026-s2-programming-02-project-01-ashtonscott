@@ -78,6 +78,25 @@
             };
         }
 
+        /// <summary>
+        /// Get the lecturer ESalary from EPosition
+        /// </summary>
+        /// <param name="position"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
+        public static ESalary GetSalary(EPosition position)
+        {
+            return position switch
+            {
+                EPosition.Lecturer => ESalary.LecturerSalary,
+                EPosition.SeniorLecturer => ESalary.SeniorLecturerSalary,
+                EPosition.PrincipalLecturer => ESalary.PrincipalLecturerSalary,
+                EPosition.AssociateProfessor => ESalary.AssociateProfessorSalary,
+                EPosition.Professor => ESalary.ProfessorSalary,
+                _ => throw new ArgumentException("Invalid position")
+            };
+        }
+
         public override string ToString()
         {
             return $"""
