@@ -144,15 +144,8 @@ namespace WinFormsApp1
             File.AppendAllText(DataPath + "lecturers.txt", "\n" + dataEntry );
         }
 
-        public void RemoveLecturer(int id)
+        public void RemoveLecturer(Lecturer lecturer)
         {
-            Lecturer lecturer = lecturers.FirstOrDefault(i => i.Id == id);
-
-            if (lecturer == null)
-            {
-                throw new Exception($"Lecturer with ID {id} was not found.");
-            }
-
             lecturers.Remove(lecturer);
 
             List<string> lines = [];

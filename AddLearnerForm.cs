@@ -31,26 +31,33 @@ namespace WinFormsApp1
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            List<int> marks = [int.Parse(Mark1.Text), int.Parse(Mark2.Text), int.Parse(Mark3.Text), int.Parse(Mark4.Text), int.Parse(Mark5.Text),];
-
+            List<int> marks = [int.Parse(Mark1.Text), int.Parse(Mark2.Text), int.Parse(Mark3.Text), int.Parse(Mark4.Text), int.Parse(Mark5.Text)];
+            
             foreach (int mark in marks)
             {
                 if (mark < 0)
                 {
-                    MessageBox.Show("You can not input a negative mark.", "Error");
+                    MessageBox.Show("You can not input a negative mark.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 if (mark > 100)
                 {
-                    MessageBox.Show("You can not input a mark over 100.", "Error");
+                    MessageBox.Show("You can not input a mark over 100.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
 
             int courseIndex = CourseComboBox.SelectedIndex;
 
-            _dataHandler.AddLearner(FirstNameTextBox.Text, LastNameTextBox.Text, courseIndex, marks);
+            try
+            {
+                _dataHandler.AddLearner(FirstNameTextBox.Text, LastNameTextBox.Text, courseIndex, marks);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             Close();
         }

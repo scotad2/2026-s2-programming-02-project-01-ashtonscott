@@ -37,7 +37,14 @@ namespace WinFormsApp1
             Lecturer.ESalary salary = Lecturer.GetSalary(position);
             int courseIndex = CourseComboBox.SelectedIndex;
 
-            _dataHandler.AddLecturer(FirstNameTextBox.Text, LastNameTextBox.Text, position, salary, courseIndex);
+            try
+            {
+                _dataHandler.AddLecturer(FirstNameTextBox.Text, LastNameTextBox.Text, position, salary, courseIndex);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             Close();
         }

@@ -23,11 +23,36 @@ namespace WinFormsApp1
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(IdTextBox.Text);
+            // Check if ID is valid
+            if (!int.TryParse(IdTextBox.Text, out int id))
+            {
+                MessageBox.Show("Please enter a valid lecturer ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            _dataHandler.RemoveLecturer(id);
+            // Try and get the lecturer by ID
+            Lecturer lecturer = _dataHandler.lecturers.FirstOrDefault(l => l.Id == id);
 
-            Close();
+            // If the above search did not match a result tell the user
+            if (lecturer == null)
+            {
+                MessageBox.Show($"Lecturer with ID {id} was not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check if the user wants to delete the lecturer at the given ID
+            DialogResult result = MessageBox.Show(
+                $"Are you sure you want to delete {lecturer.FirstName} {lecturer.LastName}?",
+                "Confirm",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                _dataHandler.RemoveLecturer(lecturer);
+                Close();
+            }
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
