@@ -277,6 +277,10 @@ namespace WinFormsApp1
         private void RemoveLecturerButton_Click(object sender, EventArgs e)
         {
             ConsoleDebugger.Log("'Remove Lecturer' selected.", ConsoleDebugger.LogType.Event);
+
+            RemoveLecturerForm form = new(_dataHandler);
+
+            form.ShowDialog();
         }
     }
 }

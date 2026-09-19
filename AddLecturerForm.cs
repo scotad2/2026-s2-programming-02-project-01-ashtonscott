@@ -31,11 +31,6 @@ namespace WinFormsApp1
 
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void AddButton_Click(object sender, EventArgs e)
         {
             Lecturer.EPosition position = (Lecturer.EPosition)PositionComboBox.SelectedIndex;
@@ -46,5 +41,11 @@ namespace WinFormsApp1
 
             Close();
         }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
     }
 }
