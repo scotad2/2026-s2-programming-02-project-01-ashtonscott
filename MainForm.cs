@@ -173,23 +173,14 @@ namespace WinFormsApp1
 
             try
             {
+                // Load all persistent data saved in files.
                 _dataHandler.LoadFiles();
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 ConsoleDebugger.Log(ex.Message, ConsoleDebugger.LogType.Error);
-            }
-
-            foreach (var learner in _dataHandler.learners)
-            {
-                ConsoleDebugger.Log($"\n{learner.ToString()}", ConsoleDebugger.LogType.Info);
-                Console.WriteLine();
-            }
-
-            foreach (var lecturer in _dataHandler.lecturers)
-            {
-                ConsoleDebugger.Log($"\n{lecturer.ToString()}", ConsoleDebugger.LogType.Info);
-                Console.WriteLine();
             }
         }
 

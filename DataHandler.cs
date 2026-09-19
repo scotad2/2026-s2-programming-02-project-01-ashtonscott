@@ -48,14 +48,17 @@ namespace WinFormsApp1
         /// <exception cref="FileNotFoundException"></exception>
         private void LoadLearnersFile()
         {
+            // Check if the file exists
             if (!File.Exists(DataPath + "learners.txt"))
             {
                 throw new FileNotFoundException();
             }
 
             string[] lines = File.ReadAllLines(DataPath + "learners.txt");
+
             foreach (string line in lines)
             {
+                // Seperate into fields
                 string[] fields = line.Split(",");
 
                 // Learner fields
@@ -66,7 +69,7 @@ namespace WinFormsApp1
 
                 List<int> marks = [];
 
-                // Marks
+                // Add marks to above list
                 for (int i = 4; i < fields.Length; i++)
                 {
                     marks.Add(int.Parse(fields[i]));
@@ -80,22 +83,22 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Loads the lecturer.txt file data
+        /// Loads the lecturers.txt file data
         /// </summary>
         /// <exception cref="FileNotFoundException"></exception>
         private void LoadLecturersFile()
         {
-            string filePath = Path.Combine(DataPath, "lecturers.txt");
-
-            if (!File.Exists(filePath))
+            // Check if the file exists
+            if (!File.Exists(DataPath + "lecturers.txt"))
             {
                 throw new FileNotFoundException();
             }
 
-            string[] lines = File.ReadAllLines(filePath);
+            string[] lines = File.ReadAllLines(DataPath + "lecturers.txt");
 
             foreach (string line in lines)
             {
+                // Seperate into fields
                 string[] fields = line.Split(",");
 
                 // Lecturer fields
@@ -116,46 +119,86 @@ namespace WinFormsApp1
         /// </summary>
         public void LoadFiles()
         {
-            LoadLearnersFile(); // ./data/learners.txt
-            LoadLecturersFile(); // ./data/lecturers.txt
+            // This method might seem a little redundant but
+            // this is just so I only need to call only one method
+            // from MainForm.cs
+
+            // ./data/learners.txt
+            LoadLearnersFile();
+
+            // ./data/lecturers.txt
+            LoadLecturersFile();
         }
 
-        public void AddLearner (string firstName, string lastName, int courseIndex, List<int> marks)
+        /// <summary>
+        /// Add a Learner to learners.txt
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <param name="courseIndex"></param>
+        /// <param name="marks"></param>
+        public void AddLearner(string firstName, string lastName, int courseIndex, List<int> marks)
         {
             int id = learners.Count + 1;
 
+            // Create the Learners Course Assessment Marks
             CourseAssessmentMark courseAssessmentMark = new(courses[courseIndex], marks);
 
+            // Add Learner to the Learner list
             learners.Add(new(id, firstName, lastName, courseAssessmentMark));
 
+            // Create the data entry
             string dataEntry = $"{id},{firstName},{lastName},{courses.IndexOf(courseAssessmentMark.Course)},{string.Join(",", courseAssessmentMark.GetAllMarks())}";
 
+            // Append the data entry to learners.txt
             File.AppendAllText(DataPath + "learners.txt", "\n" + dataEntry);
         }
 
+        /// <summary>
+        /// Add a Lecturer to lecturers.txt
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <param name="position"></param>
+        /// <param name="salary"></param>
+        /// <param name="courseIndex"></param>
         public void AddLecturer(string firstName, string lastName, EPosition position, ESalary salary, int courseIndex)
         {
             int id = lecturers.Count + 1;
 
+            // Add Lecturer to the Lecturer list
             lecturers.Add(new(id, firstName, lastName, position, salary, courseIndex));
 
+            // Create the data entry
             string dataEntry = $"{id},{firstName},{lastName},{(int)position},{(int)salary},{courseIndex}";
 
+            // Append the data entry to lecturers.txt
             File.AppendAllText(DataPath + "lecturers.txt", "\n" + dataEntry );
         }
 
+        /// <summary>
+        /// Remove a Lecturer from lecturers.txt
+        /// </summary>
+        /// <param name="lecturer"></param>
         public void RemoveLecturer(Lecturer lecturer)
         {
+            // Remove the Lecturer from the list
             lecturers.Remove(lecturer);
 
-            List<string> lines = [];
+            List<string> dataEntries = [];
+
+            // Rebuild the lecturers.txt file
+
+            // This ends up being really simple but I don't know if it's the
+            // best way to go about this sort of thing.
 
             foreach (Lecturer l in lecturers)
             {
-                lines.Add($"{l.Id},{l.FirstName},{l.LastName},{(int)l.Position},{(int)l.Salary},{l.CourseIndex}");
+                dataEntries.Add($"{l.Id},{l.FirstName},{l.LastName},{(int)l.Position},{(int)l.Salary},{l.CourseIndex}");
             }
 
-            File.WriteAllLines(DataPath + "lecturers.txt", lines);
+            // Overwrite the data entries to lecturers.txt
+            File.WriteAllLines(DataPath + "lecturers.txt", dataEntries);
         }
     }
 }

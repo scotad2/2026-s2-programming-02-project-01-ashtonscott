@@ -1,7 +1,7 @@
 ﻿namespace WinFormsApp1
 {
     /// <summary>
-    /// Institution
+    /// Represents an Institution
     /// </summary>
     /// <param name="name"></param>
     /// <param name="region"></param>

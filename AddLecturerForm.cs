@@ -34,7 +34,7 @@ namespace WinFormsApp1
         private void AddButton_Click(object sender, EventArgs e)
         {
             Lecturer.EPosition position = (Lecturer.EPosition)PositionComboBox.SelectedIndex;
-            Lecturer.ESalary salary = Lecturer.GetSalary(position);
+            Lecturer.ESalary salary = Lecturer.GetSalary(position); // Calculate the salary from the position
             int courseIndex = CourseComboBox.SelectedIndex;
 
             try
@@ -44,6 +44,7 @@ namespace WinFormsApp1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             Close();

@@ -42,13 +42,7 @@
         /// <param name="position"></param>
         /// <param name="salary"></param>
         /// <param name="courseIndex"></param>
-        public Lecturer(
-            int id,
-            string firstName,
-            string lastName,
-            EPosition position,
-            ESalary salary,
-            int courseIndex)
+        public Lecturer(int id, string firstName, string lastName, EPosition position, ESalary salary, int courseIndex)
         {
             Id = id;
             FirstName = firstName;

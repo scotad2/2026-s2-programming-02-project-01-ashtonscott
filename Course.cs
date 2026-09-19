@@ -1,7 +1,7 @@
 ﻿namespace WinFormsApp1
 {
     /// <summary>
-    /// Course
+    /// Represents a Course
     /// </summary>
     /// <param name="department"></param>
     /// <param name="code"></param>
@@ -9,12 +9,7 @@
     /// <param name="description"></param>
     /// <param name="credits"></param>
     /// <param name="fees"></param>
-    internal class Course(Department department,
-                          int code,
-                          string name,
-                          string description,
-                          int credits,
-                          int fees)
+    internal class Course(Department department, int code, string name, string description, int credits, int fees)
     {
         public Department Department { get; set; } = department;
         public int Code { get; set; } = code;

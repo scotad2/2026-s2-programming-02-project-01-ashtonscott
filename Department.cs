@@ -1,7 +1,7 @@
 ﻿namespace WinFormsApp1
 {
     /// <summary>
-    /// Department
+    /// Represents a Department
     /// </summary>
     /// <param name="institution"></param>
     /// <param name="name"></param>

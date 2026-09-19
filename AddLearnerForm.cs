@@ -35,12 +35,14 @@ namespace WinFormsApp1
             
             foreach (int mark in marks)
             {
+                // Check if a mark is negative
                 if (mark < 0)
                 {
                     MessageBox.Show("You can not input a negative mark.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
+                // Check if a mark is over 100
                 if (mark > 100)
                 {
                     MessageBox.Show("You can not input a mark over 100.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -57,6 +59,7 @@ namespace WinFormsApp1
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             Close();
