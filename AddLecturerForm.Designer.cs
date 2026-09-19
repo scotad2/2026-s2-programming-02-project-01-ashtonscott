@@ -123,6 +123,7 @@
             AddButton.TabIndex = 19;
             AddButton.Text = "Add";
             AddButton.UseVisualStyleBackColor = false;
+            AddButton.Click += AddButton_Click;
             // 
             // label4
             // 

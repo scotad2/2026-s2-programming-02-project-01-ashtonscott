@@ -28,14 +28,22 @@ namespace WinFormsApp1
 
         private void AddLecturerForm_Load(object sender, EventArgs e)
         {
-            Lecturer.EPosition position = (Lecturer.EPosition)PositionComboBox.SelectedIndex;
-            int courseIndex = CourseComboBox.SelectedIndex;
 
-            _dataHandler.AddLecturer(FirstNameTextBox, LastNameTextBox, );
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
+            Close();
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            Lecturer.EPosition position = (Lecturer.EPosition)PositionComboBox.SelectedIndex;
+            Lecturer.ESalary salary = Lecturer.GetSalary(position);
+            int courseIndex = CourseComboBox.SelectedIndex;
+
+            _dataHandler.AddLecturer(FirstNameTextBox.Text, LastNameTextBox.Text, position, salary, courseIndex);
+
             Close();
         }
     }
