@@ -41,185 +41,241 @@
             AddLecturerButton = new Button();
             RemoveLecturerButton = new Button();
             DataGridViewMain = new DataGridView();
+            groupBox1 = new GroupBox();
+            groupBox2 = new GroupBox();
+            groupBox3 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)DataGridViewMain).BeginInit();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // DisplayCourseDetailsButton
             // 
-            DisplayCourseDetailsButton.Location = new Point(13, 13);
-            DisplayCourseDetailsButton.Margin = new Padding(4, 4, 4, 4);
+            DisplayCourseDetailsButton.BackColor = SystemColors.ControlLightLight;
+            DisplayCourseDetailsButton.Location = new Point(8, 23);
+            DisplayCourseDetailsButton.Margin = new Padding(4);
             DisplayCourseDetailsButton.Name = "DisplayCourseDetailsButton";
-            DisplayCourseDetailsButton.Size = new Size(188, 22);
+            DisplayCourseDetailsButton.Size = new Size(185, 22);
             DisplayCourseDetailsButton.TabIndex = 0;
             DisplayCourseDetailsButton.Text = "Display Course Details";
             DisplayCourseDetailsButton.TextAlign = ContentAlignment.MiddleLeft;
-            DisplayCourseDetailsButton.UseVisualStyleBackColor = true;
+            DisplayCourseDetailsButton.UseVisualStyleBackColor = false;
             DisplayCourseDetailsButton.Click += DisplayCourseDetailsButton_Click;
             // 
             // DisplayAllMarksButton
             // 
-            DisplayAllMarksButton.Location = new Point(13, 50);
-            DisplayAllMarksButton.Margin = new Padding(4, 4, 4, 4);
+            DisplayAllMarksButton.BackColor = SystemColors.ControlLightLight;
+            DisplayAllMarksButton.Location = new Point(7, 23);
+            DisplayAllMarksButton.Margin = new Padding(4);
             DisplayAllMarksButton.Name = "DisplayAllMarksButton";
             DisplayAllMarksButton.Size = new Size(188, 22);
             DisplayAllMarksButton.TabIndex = 1;
             DisplayAllMarksButton.Text = "Display All Marks";
             DisplayAllMarksButton.TextAlign = ContentAlignment.MiddleLeft;
-            DisplayAllMarksButton.UseVisualStyleBackColor = true;
+            DisplayAllMarksButton.UseVisualStyleBackColor = false;
             DisplayAllMarksButton.Click += DisplayAllMarksButton_Click;
             // 
             // DisplayAllGradesButton
             // 
-            DisplayAllGradesButton.Location = new Point(13, 87);
-            DisplayAllGradesButton.Margin = new Padding(4, 4, 4, 4);
+            DisplayAllGradesButton.BackColor = SystemColors.ControlLightLight;
+            DisplayAllGradesButton.Location = new Point(7, 60);
+            DisplayAllGradesButton.Margin = new Padding(4);
             DisplayAllGradesButton.Name = "DisplayAllGradesButton";
             DisplayAllGradesButton.Size = new Size(188, 22);
             DisplayAllGradesButton.TabIndex = 2;
             DisplayAllGradesButton.Text = "Display All Grades";
             DisplayAllGradesButton.TextAlign = ContentAlignment.MiddleLeft;
-            DisplayAllGradesButton.UseVisualStyleBackColor = true;
+            DisplayAllGradesButton.UseVisualStyleBackColor = false;
             DisplayAllGradesButton.Click += DisplayAllGradesButton_Click;
             // 
             // DisplayHighestMarksButton
             // 
-            DisplayHighestMarksButton.Location = new Point(13, 125);
-            DisplayHighestMarksButton.Margin = new Padding(4, 4, 4, 4);
+            DisplayHighestMarksButton.BackColor = SystemColors.ControlLightLight;
+            DisplayHighestMarksButton.Location = new Point(7, 98);
+            DisplayHighestMarksButton.Margin = new Padding(4);
             DisplayHighestMarksButton.Name = "DisplayHighestMarksButton";
             DisplayHighestMarksButton.Size = new Size(188, 22);
             DisplayHighestMarksButton.TabIndex = 3;
             DisplayHighestMarksButton.Text = "Display Highest Marks";
             DisplayHighestMarksButton.TextAlign = ContentAlignment.MiddleLeft;
-            DisplayHighestMarksButton.UseVisualStyleBackColor = true;
+            DisplayHighestMarksButton.UseVisualStyleBackColor = false;
             DisplayHighestMarksButton.Click += DisplayHighestMarksButton_Click;
             // 
             // DisplayLowestMarksButton
             // 
-            DisplayLowestMarksButton.Location = new Point(13, 163);
-            DisplayLowestMarksButton.Margin = new Padding(4, 4, 4, 4);
+            DisplayLowestMarksButton.BackColor = SystemColors.ControlLightLight;
+            DisplayLowestMarksButton.Location = new Point(7, 136);
+            DisplayLowestMarksButton.Margin = new Padding(4);
             DisplayLowestMarksButton.Name = "DisplayLowestMarksButton";
             DisplayLowestMarksButton.Size = new Size(188, 22);
             DisplayLowestMarksButton.TabIndex = 4;
             DisplayLowestMarksButton.Text = "Display Lowest Marks";
             DisplayLowestMarksButton.TextAlign = ContentAlignment.MiddleLeft;
-            DisplayLowestMarksButton.UseVisualStyleBackColor = true;
+            DisplayLowestMarksButton.UseVisualStyleBackColor = false;
             DisplayLowestMarksButton.Click += DisplayLowestMarksButton_Click;
             // 
             // DisplayFailMarksButton
             // 
-            DisplayFailMarksButton.Location = new Point(13, 200);
-            DisplayFailMarksButton.Margin = new Padding(4, 4, 4, 4);
+            DisplayFailMarksButton.BackColor = SystemColors.ControlLightLight;
+            DisplayFailMarksButton.Location = new Point(7, 173);
+            DisplayFailMarksButton.Margin = new Padding(4);
             DisplayFailMarksButton.Name = "DisplayFailMarksButton";
             DisplayFailMarksButton.Size = new Size(188, 22);
             DisplayFailMarksButton.TabIndex = 5;
             DisplayFailMarksButton.Text = "Display Fail Marks";
             DisplayFailMarksButton.TextAlign = ContentAlignment.MiddleLeft;
-            DisplayFailMarksButton.UseVisualStyleBackColor = true;
+            DisplayFailMarksButton.UseVisualStyleBackColor = false;
             DisplayFailMarksButton.Click += DisplayFailMarksButton_Click;
             // 
             // DisplayAverageMarksButton
             // 
-            DisplayAverageMarksButton.Location = new Point(13, 237);
-            DisplayAverageMarksButton.Margin = new Padding(4, 4, 4, 4);
+            DisplayAverageMarksButton.BackColor = SystemColors.ControlLightLight;
+            DisplayAverageMarksButton.Location = new Point(7, 210);
+            DisplayAverageMarksButton.Margin = new Padding(4);
             DisplayAverageMarksButton.Name = "DisplayAverageMarksButton";
             DisplayAverageMarksButton.Size = new Size(188, 22);
             DisplayAverageMarksButton.TabIndex = 6;
             DisplayAverageMarksButton.Text = "Display Average Marks";
             DisplayAverageMarksButton.TextAlign = ContentAlignment.MiddleLeft;
-            DisplayAverageMarksButton.UseVisualStyleBackColor = true;
+            DisplayAverageMarksButton.UseVisualStyleBackColor = false;
             DisplayAverageMarksButton.Click += DisplayAverageMarksButton_Click;
             // 
             // DisplayAverageGradesButton
             // 
-            DisplayAverageGradesButton.Location = new Point(13, 275);
-            DisplayAverageGradesButton.Margin = new Padding(4, 4, 4, 4);
+            DisplayAverageGradesButton.BackColor = SystemColors.ControlLightLight;
+            DisplayAverageGradesButton.Location = new Point(7, 248);
+            DisplayAverageGradesButton.Margin = new Padding(4);
             DisplayAverageGradesButton.Name = "DisplayAverageGradesButton";
             DisplayAverageGradesButton.Size = new Size(188, 22);
             DisplayAverageGradesButton.TabIndex = 7;
             DisplayAverageGradesButton.Text = "Display Average Grades";
             DisplayAverageGradesButton.TextAlign = ContentAlignment.MiddleLeft;
-            DisplayAverageGradesButton.UseVisualStyleBackColor = true;
+            DisplayAverageGradesButton.UseVisualStyleBackColor = false;
             DisplayAverageGradesButton.Click += DisplayAverageGradesButton_Click;
             // 
             // DisplayLecturerDetailsButton
             // 
-            DisplayLecturerDetailsButton.Location = new Point(13, 313);
-            DisplayLecturerDetailsButton.Margin = new Padding(4, 4, 4, 4);
+            DisplayLecturerDetailsButton.BackColor = SystemColors.ControlLightLight;
+            DisplayLecturerDetailsButton.Location = new Point(7, 23);
+            DisplayLecturerDetailsButton.Margin = new Padding(4);
             DisplayLecturerDetailsButton.Name = "DisplayLecturerDetailsButton";
-            DisplayLecturerDetailsButton.Size = new Size(188, 22);
+            DisplayLecturerDetailsButton.Size = new Size(186, 22);
             DisplayLecturerDetailsButton.TabIndex = 8;
             DisplayLecturerDetailsButton.Text = "Display Lecturer Details";
             DisplayLecturerDetailsButton.TextAlign = ContentAlignment.MiddleLeft;
-            DisplayLecturerDetailsButton.UseVisualStyleBackColor = true;
+            DisplayLecturerDetailsButton.UseVisualStyleBackColor = false;
             DisplayLecturerDetailsButton.Click += DisplayLecturerDetailsButton_Click;
             // 
             // AddLearnerButton
             // 
-            AddLearnerButton.Location = new Point(417, 502);
-            AddLearnerButton.Margin = new Padding(4, 4, 4, 4);
+            AddLearnerButton.BackColor = SystemColors.ControlLightLight;
+            AddLearnerButton.Location = new Point(7, 287);
+            AddLearnerButton.Margin = new Padding(4);
             AddLearnerButton.Name = "AddLearnerButton";
             AddLearnerButton.Size = new Size(188, 22);
             AddLearnerButton.TabIndex = 9;
             AddLearnerButton.Text = "Add Learner";
-            AddLearnerButton.TextAlign = ContentAlignment.MiddleLeft;
-            AddLearnerButton.UseVisualStyleBackColor = true;
+            AddLearnerButton.UseVisualStyleBackColor = false;
             AddLearnerButton.Click += AddLearnerButton_Click;
             // 
             // AddLecturerButton
             // 
-            AddLecturerButton.Location = new Point(221, 502);
-            AddLecturerButton.Margin = new Padding(4, 4, 4, 4);
+            AddLecturerButton.BackColor = SystemColors.ControlLightLight;
+            AddLecturerButton.Location = new Point(7, 53);
+            AddLecturerButton.Margin = new Padding(4);
             AddLecturerButton.Name = "AddLecturerButton";
-            AddLecturerButton.Size = new Size(188, 22);
+            AddLecturerButton.Size = new Size(93, 22);
             AddLecturerButton.TabIndex = 10;
-            AddLecturerButton.Text = "Add Lecturer";
+            AddLecturerButton.Text = "Add";
             AddLecturerButton.TextAlign = ContentAlignment.MiddleLeft;
-            AddLecturerButton.UseVisualStyleBackColor = true;
+            AddLecturerButton.UseVisualStyleBackColor = false;
             AddLecturerButton.Click += AddLecturerButton_Click;
             // 
             // RemoveLecturerButton
             // 
-            RemoveLecturerButton.Location = new Point(221, 532);
-            RemoveLecturerButton.Margin = new Padding(4, 4, 4, 4);
+            RemoveLecturerButton.BackColor = SystemColors.ControlLightLight;
+            RemoveLecturerButton.Location = new Point(100, 53);
+            RemoveLecturerButton.Margin = new Padding(4);
             RemoveLecturerButton.Name = "RemoveLecturerButton";
-            RemoveLecturerButton.Size = new Size(188, 22);
+            RemoveLecturerButton.Size = new Size(93, 22);
             RemoveLecturerButton.TabIndex = 11;
-            RemoveLecturerButton.Text = "Remove Lecturer";
+            RemoveLecturerButton.Text = "Remove";
             RemoveLecturerButton.TextAlign = ContentAlignment.MiddleLeft;
-            RemoveLecturerButton.UseVisualStyleBackColor = true;
+            RemoveLecturerButton.UseVisualStyleBackColor = false;
             RemoveLecturerButton.Click += RemoveLecturerButton_Click;
             // 
             // DataGridViewMain
             // 
+            DataGridViewMain.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             DataGridViewMain.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridViewMain.Location = new Point(221, 13);
+            DataGridViewMain.GridColor = SystemColors.ControlDark;
+            DataGridViewMain.Location = new Point(227, 12);
             DataGridViewMain.Margin = new Padding(3, 2, 3, 2);
             DataGridViewMain.Name = "DataGridViewMain";
             DataGridViewMain.RowHeadersWidth = 51;
-            DataGridViewMain.Size = new Size(800, 472);
+            DataGridViewMain.Size = new Size(817, 485);
             DataGridViewMain.TabIndex = 13;
+            // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = SystemColors.Control;
+            groupBox1.Controls.Add(DisplayLecturerDetailsButton);
+            groupBox1.Controls.Add(RemoveLecturerButton);
+            groupBox1.Controls.Add(AddLecturerButton);
+            groupBox1.Location = new Point(12, 410);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(200, 87);
+            groupBox1.TabIndex = 14;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Lecturers";
+            // 
+            // groupBox2
+            // 
+            groupBox2.BackColor = SystemColors.Control;
+            groupBox2.Controls.Add(DisplayAllMarksButton);
+            groupBox2.Controls.Add(DisplayAllGradesButton);
+            groupBox2.Controls.Add(DisplayHighestMarksButton);
+            groupBox2.Controls.Add(AddLearnerButton);
+            groupBox2.Controls.Add(DisplayLowestMarksButton);
+            groupBox2.Controls.Add(DisplayAverageGradesButton);
+            groupBox2.Controls.Add(DisplayFailMarksButton);
+            groupBox2.Controls.Add(DisplayAverageMarksButton);
+            groupBox2.Location = new Point(12, 78);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(200, 326);
+            groupBox2.TabIndex = 15;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Learners";
+            // 
+            // groupBox3
+            // 
+            groupBox3.BackColor = SystemColors.Control;
+            groupBox3.Controls.Add(DisplayCourseDetailsButton);
+            groupBox3.Location = new Point(12, 12);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(200, 60);
+            groupBox3.TabIndex = 16;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Courses";
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1040, 566);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(1056, 511);
+            Controls.Add(groupBox3);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
             Controls.Add(DataGridViewMain);
-            Controls.Add(RemoveLecturerButton);
-            Controls.Add(AddLecturerButton);
-            Controls.Add(AddLearnerButton);
-            Controls.Add(DisplayLecturerDetailsButton);
-            Controls.Add(DisplayAverageGradesButton);
-            Controls.Add(DisplayAverageMarksButton);
-            Controls.Add(DisplayFailMarksButton);
-            Controls.Add(DisplayLowestMarksButton);
-            Controls.Add(DisplayHighestMarksButton);
-            Controls.Add(DisplayAllGradesButton);
-            Controls.Add(DisplayAllMarksButton);
-            Controls.Add(DisplayCourseDetailsButton);
             Margin = new Padding(3, 2, 3, 2);
             Name = "MainForm";
             Text = "Project 1 - Ashton Scott";
             ((System.ComponentModel.ISupportInitialize)DataGridViewMain).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox2.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -238,5 +294,8 @@
         private Button AddLecturerButton;
         private Button RemoveLecturerButton;
         private DataGridView DataGridViewMain;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        private GroupBox groupBox3;
     }
 }

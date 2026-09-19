@@ -35,6 +35,7 @@ namespace WinFormsApp1
         {
             Lecturer.EPosition position = (Lecturer.EPosition)PositionComboBox.SelectedIndex;
             Lecturer.ESalary salary = Lecturer.GetSalary(position); // Calculate the salary from the position
+
             int courseIndex = CourseComboBox.SelectedIndex;
 
             try

@@ -44,9 +44,9 @@
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
-            label9 = new Label();
             AddButton = new Button();
             CancelButton = new Button();
+            label9 = new Label();
             SuspendLayout();
             // 
             // FirstNameTextBox
@@ -187,15 +187,6 @@
             label8.TabIndex = 15;
             label8.Text = "1.";
             // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(354, 17);
-            label9.Name = "label9";
-            label9.Size = new Size(42, 15);
-            label9.TabIndex = 16;
-            label9.Text = "Marks:";
-            // 
             // AddButton
             // 
             AddButton.BackColor = Color.LimeGreen;
@@ -219,6 +210,15 @@
             CancelButton.Text = "Cancel";
             CancelButton.UseVisualStyleBackColor = false;
             CancelButton.Click += CancelButton_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(354, 17);
+            label9.Name = "label9";
+            label9.Size = new Size(42, 15);
+            label9.TabIndex = 16;
+            label9.Text = "Marks:";
             // 
             // AddLearnerForm
             // 
@@ -270,8 +270,8 @@
         private Label label6;
         private Label label7;
         private Label label8;
-        private Label label9;
         private Button AddButton;
         private Button CancelButton;
+        private Label label9;
     }
 }
