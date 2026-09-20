@@ -1,5 +1,3 @@
-using static WinFormsApp1.Lecturer;
-
 namespace WinFormsApp1
 {
     public partial class MainForm : Form
@@ -285,7 +283,7 @@ namespace WinFormsApp1
 
             List<Learner> results = [];
 
-            results.AddRange(_dataHandler.learners.Where(l =>l.CourseAssessmentMark.GetAllMarks().Any(mark => mark >= minMark && mark <= maxMark)));
+            results.AddRange(_dataHandler.learners.Where(l => l.CourseAssessmentMark.GetAllMarks().Any(mark => mark >= minMark && mark <= maxMark)));
 
             // Check if no results were matched
             if (results.Count == 0)
@@ -377,6 +375,13 @@ namespace WinFormsApp1
         /// </summary>
         private void CalculateAverageSalary()
         {
+            // Check if lecturers list is empty just incase someone decides to delete them all...
+            if (_dataHandler.lecturers.Count == 0)
+            {
+                MessageBox.Show($"There are no Lecturers", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             double averageSalary = _dataHandler.lecturers.Average(l => (int)l.Salary);
 
             MessageBox.Show($"Average Salary: {averageSalary:C0}", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
