@@ -237,6 +237,24 @@ namespace WinFormsApp1
             DataGridViewMain.DataSource = displayResults;
         }
 
+        public void FilterMarksByRange()
+        {
+            // 
+            if (!int.TryParse(MinValue.Text, out int minMark) || !int.TryParse(MaxValue.Text, out int maxMark))
+            {
+                MessageBox.Show("Please enter valid minimum and maximum marks.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check that the minimum mark is not greater than the maximum mark
+            if (minMark > maxMark)
+            {
+                // One must never assume the user knows what they are doing
+                MessageBox.Show("The minimum mark cannot be greater than the maximum mark.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
         public void CourseSearch()
         {
             // Fields
@@ -295,6 +313,13 @@ namespace WinFormsApp1
             }).ToList();
 
             DataGridViewMain.DataSource = displayResults;
+        }
+
+        public void CalculateAverageSalary()
+        {
+            double averageSalary = _dataHandler.lecturers.Average(l => (int)l.Salary);
+
+            MessageBox.Show($"Average Salary: {averageSalary:C0}", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public MainForm()
@@ -412,6 +437,28 @@ namespace WinFormsApp1
         private void CourseSearchButton_Click(object sender, EventArgs e)
         {
             CourseSearch();
+        }
+
+        private void ComputeButton_Click(object sender, EventArgs e)
+        {
+            int statisticsOption = StatisticsComboBox.SelectedIndex;
+
+            // Check if the user hasn't selected anything
+            if (statisticsOption == -1)
+            {
+                MessageBox.Show("You have not selected an item to compute.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (statisticsOption == 0)
+            {
+                CalculateAverageSalary();
+            }
+        }
+
+        private void FilterButton_Click(object sender, EventArgs e)
+        {
+            FilterMarksByRange();
         }
     }
 }

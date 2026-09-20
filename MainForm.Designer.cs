@@ -56,12 +56,25 @@
             CourseSearchButton = new Button();
             label4 = new Label();
             CourseComboBox = new ComboBox();
+            groupBox6 = new GroupBox();
+            label5 = new Label();
+            StatisticsComboBox = new ComboBox();
+            ComputeButton = new Button();
+            groupBox7 = new GroupBox();
+            MaxValue = new TextBox();
+            label6 = new Label();
+            MinValue = new TextBox();
+            FilterButton = new Button();
+            label7 = new Label();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)DataGridViewMain).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox5.SuspendLayout();
+            groupBox6.SuspendLayout();
+            groupBox7.SuspendLayout();
             SuspendLayout();
             // 
             // DisplayCourseDetailsButton
@@ -305,12 +318,13 @@
             // 
             // PersonSearchButton
             // 
+            PersonSearchButton.BackColor = Color.Bisque;
             PersonSearchButton.Location = new Point(133, 90);
             PersonSearchButton.Name = "PersonSearchButton";
             PersonSearchButton.Size = new Size(75, 23);
             PersonSearchButton.TabIndex = 18;
             PersonSearchButton.Text = "Search";
-            PersonSearchButton.UseVisualStyleBackColor = true;
+            PersonSearchButton.UseVisualStyleBackColor = false;
             PersonSearchButton.Click += PersonSearchButton_Click;
             // 
             // label2
@@ -363,12 +377,13 @@
             // 
             // CourseSearchButton
             // 
+            CourseSearchButton.BackColor = Color.Bisque;
             CourseSearchButton.Location = new Point(133, 90);
             CourseSearchButton.Name = "CourseSearchButton";
             CourseSearchButton.Size = new Size(75, 23);
             CourseSearchButton.TabIndex = 18;
             CourseSearchButton.Text = "Search";
-            CourseSearchButton.UseVisualStyleBackColor = true;
+            CourseSearchButton.UseVisualStyleBackColor = false;
             CourseSearchButton.Click += CourseSearchButton_Click;
             // 
             // label4
@@ -389,18 +404,129 @@
             CourseComboBox.Size = new Size(121, 23);
             CourseComboBox.TabIndex = 18;
             // 
+            // groupBox6
+            // 
+            groupBox6.Controls.Add(label5);
+            groupBox6.Controls.Add(StatisticsComboBox);
+            groupBox6.Controls.Add(ComputeButton);
+            groupBox6.Location = new Point(12, 505);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new Size(200, 128);
+            groupBox6.TabIndex = 22;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "Statistics";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(8, 22);
+            label5.Name = "label5";
+            label5.Size = new Size(44, 15);
+            label5.TabIndex = 2;
+            label5.Text = "Option";
+            // 
+            // StatisticsComboBox
+            // 
+            StatisticsComboBox.FormattingEnabled = true;
+            StatisticsComboBox.Items.AddRange(new object[] { "Average Salary" });
+            StatisticsComboBox.Location = new Point(8, 40);
+            StatisticsComboBox.Name = "StatisticsComboBox";
+            StatisticsComboBox.Size = new Size(185, 23);
+            StatisticsComboBox.TabIndex = 1;
+            // 
+            // ComputeButton
+            // 
+            ComputeButton.BackColor = Color.Bisque;
+            ComputeButton.Location = new Point(8, 72);
+            ComputeButton.Name = "ComputeButton";
+            ComputeButton.Size = new Size(185, 41);
+            ComputeButton.TabIndex = 0;
+            ComputeButton.Text = "Compute";
+            ComputeButton.UseVisualStyleBackColor = false;
+            ComputeButton.Click += ComputeButton_Click;
+            // 
+            // groupBox7
+            // 
+            groupBox7.Controls.Add(label8);
+            groupBox7.Controls.Add(label7);
+            groupBox7.Controls.Add(MaxValue);
+            groupBox7.Controls.Add(label6);
+            groupBox7.Controls.Add(MinValue);
+            groupBox7.Controls.Add(FilterButton);
+            groupBox7.Location = new Point(679, 505);
+            groupBox7.Name = "groupBox7";
+            groupBox7.Size = new Size(365, 128);
+            groupBox7.TabIndex = 23;
+            groupBox7.TabStop = false;
+            groupBox7.Text = "Filter";
+            // 
+            // MaxValue
+            // 
+            MaxValue.Location = new Point(105, 40);
+            MaxValue.Name = "MaxValue";
+            MaxValue.Size = new Size(75, 23);
+            MaxValue.TabIndex = 27;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(87, 43);
+            label6.Name = "label6";
+            label6.Size = new Size(12, 15);
+            label6.TabIndex = 24;
+            label6.Text = "-";
+            // 
+            // MinValue
+            // 
+            MinValue.Location = new Point(6, 40);
+            MinValue.Name = "MinValue";
+            MinValue.Size = new Size(75, 23);
+            MinValue.TabIndex = 22;
+            // 
+            // FilterButton
+            // 
+            FilterButton.BackColor = Color.Bisque;
+            FilterButton.Location = new Point(186, 40);
+            FilterButton.Name = "FilterButton";
+            FilterButton.Size = new Size(75, 23);
+            FilterButton.TabIndex = 21;
+            FilterButton.Text = "Filter";
+            FilterButton.UseVisualStyleBackColor = false;
+            FilterButton.Click += FilterButton_Click;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(6, 22);
+            label7.Name = "label7";
+            label7.Size = new Size(31, 15);
+            label7.TabIndex = 29;
+            label7.Text = "Min.";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(105, 22);
+            label8.Name = "label8";
+            label8.Size = new Size(32, 15);
+            label8.TabIndex = 30;
+            label8.Text = "Max.";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1056, 645);
+            Controls.Add(groupBox7);
+            Controls.Add(groupBox6);
             Controls.Add(groupBox5);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(DataGridViewMain);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
             Name = "MainForm";
             Text = "Project 1 - Ashton Scott";
@@ -412,6 +538,10 @@
             groupBox4.PerformLayout();
             groupBox5.ResumeLayout(false);
             groupBox5.PerformLayout();
+            groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
+            groupBox7.ResumeLayout(false);
+            groupBox7.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -445,5 +575,19 @@
         private Button CourseSearchButton;
         private Label label4;
         private ComboBox CourseComboBox;
+        private GroupBox groupBox6;
+        private Label label5;
+        private ComboBox StatisticsComboBox;
+        private Button ComputeButton;
+        private GroupBox groupBox7;
+        private ComboBox comboBox2;
+        private ComboBox comboBox1;
+        private Button FilterButton;
+        private Label label6;
+        private TextBox MinValue;
+        private TextBox MaxValue;
+        private Label label8;
+        private Label label7;
+        private ComboBox comboBox3;
     }
 }
