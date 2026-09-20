@@ -13,13 +13,15 @@ namespace WinFormsApp1
         {
             var courseData = _dataHandler.courses.Select(course => new
             {
-                Institution = course.Department.Institution.Name,
-                Department = course.Department.Name,
                 Code = course.Code,
                 Name = course.Name,
                 Description = course.Description,
                 Credits = course.Credits,
-                Fees = course.Fees
+                Fees = course.Fees,
+                Institution = course.Department.Institution.Name,
+                Region = course.Department.Institution.Region,
+                Country = course.Department.Institution.Country,
+                Department = course.Department.Name
             }).ToList();
 
             DataGridViewMain.DataSource = courseData;
@@ -35,7 +37,8 @@ namespace WinFormsApp1
                 ID = learner.Id,
                 FirstName = learner.FirstName,
                 LastName = learner.LastName,
-                Course = learner.CourseAssessmentMark.Course.Name,
+                CourseCode = learner.CourseAssessmentMark.Course.Code,
+                CourseName = learner.CourseAssessmentMark.Course.Name,
                 Marks = string.Join(", ", learner.CourseAssessmentMark.GetAllMarks())
             }).ToList();
 
@@ -56,7 +59,8 @@ namespace WinFormsApp1
                     ID = learner.Id,
                     FirstName = learner.FirstName,
                     LastName = learner.LastName,
-                    Course = learner.CourseAssessmentMark.Course.Name,
+                    CourseCode = learner.CourseAssessmentMark.Course.Code,
+                    CourseName = learner.CourseAssessmentMark.Course.Name,
                     Grades = string.Join(", ", grades.Select(CourseAssessmentMark.GradeToString))
                 };
             }).ToList();
@@ -74,7 +78,8 @@ namespace WinFormsApp1
                 ID = learner.Id,
                 FirstName = learner.FirstName,
                 LastName = learner.LastName,
-                Course = learner.CourseAssessmentMark.Course.Name,
+                CourseCode = learner.CourseAssessmentMark.Course.Code,
+                CourseName = learner.CourseAssessmentMark.Course.Name,
                 Marks = string.Join(", ", learner.CourseAssessmentMark.GetHighestMarks())
             }).ToList();
 
@@ -91,7 +96,8 @@ namespace WinFormsApp1
                 ID = learner.Id,
                 FirstName = learner.FirstName,
                 LastName = learner.LastName,
-                Course = learner.CourseAssessmentMark.Course.Name,
+                CourseCode = learner.CourseAssessmentMark.Course.Code,
+                CourseName = learner.CourseAssessmentMark.Course.Name,
                 Marks = string.Join(", ", learner.CourseAssessmentMark.GetLowestMarks())
             }).ToList();
 
@@ -108,7 +114,8 @@ namespace WinFormsApp1
                 ID = learner.Id,
                 FirstName = learner.FirstName,
                 LastName = learner.LastName,
-                Course = learner.CourseAssessmentMark.Course.Name,
+                CourseCode = learner.CourseAssessmentMark.Course.Code,
+                CourseName = learner.CourseAssessmentMark.Course.Name,
                 Marks = string.Join(", ", learner.CourseAssessmentMark.GetFailMarks())
             }).ToList();
 
@@ -125,7 +132,8 @@ namespace WinFormsApp1
                 ID = learner.Id,
                 FirstName = learner.FirstName,
                 LastName = learner.LastName,
-                Course = learner.CourseAssessmentMark.Course.Name,
+                CourseCode = learner.CourseAssessmentMark.Course.Code,
+                CourseName = learner.CourseAssessmentMark.Course.Name,
                 Marks = string.Join(", ", learner.CourseAssessmentMark.GetAverageMark())
             }).ToList();
 
@@ -142,7 +150,8 @@ namespace WinFormsApp1
                 ID = learner.Id,
                 FirstName = learner.FirstName,
                 LastName = learner.LastName,
-                Course = learner.CourseAssessmentMark.Course.Name,
+                CourseCode = learner.CourseAssessmentMark.Course.Code,
+                CourseName = learner.CourseAssessmentMark.Course.Name,
                 AverageGrade = CourseAssessmentMark.GradeToString(learner.CourseAssessmentMark.GetAverageGrade())
             }).ToList();
 
@@ -154,14 +163,24 @@ namespace WinFormsApp1
         /// </summary>
         public void DisplayLecturerDetails()
         {
-            var lecturerData = _dataHandler.lecturers.Select(lecturer => new
+            var lecturerData = _dataHandler.lecturers.Select(lecturer =>
             {
-                ID = lecturer.Id,
-                FirstName = lecturer.FirstName,
-                LastName = lecturer.LastName,
-                Position = Lecturer.PositionToString(lecturer.Position),
-                Salary = $"${(int)lecturer.Salary}", // Cast ESalary as an int
-                Course = _dataHandler.courses[lecturer.CourseIndex].Name
+                Course course = _dataHandler.courses[lecturer.CourseIndex];
+
+                return new
+                {
+                    ID = lecturer.Id,
+                    FirstName = lecturer.FirstName,
+                    LastName = lecturer.LastName,
+                    Position = Lecturer.PositionToString(lecturer.Position),
+                    Institution = course.Department.Institution.Name,
+                    Region = course.Department.Institution.Region,
+                    Country = course.Department.Institution.Country,
+                    Department = course.Department.Name,
+                    CourseCode = course.Code,
+                    CourseName = course.Name,
+                    Salary = ((int)lecturer.Salary).ToString("C0") // Cast ESalary to an int for currency formatting
+                };
             }).ToList();
 
             DataGridViewMain.DataSource = lecturerData;
@@ -280,7 +299,8 @@ namespace WinFormsApp1
                 ID = learner.Id,
                 FirstName = learner.FirstName,
                 LastName = learner.LastName,
-                Course = learner.CourseAssessmentMark.Course.Name,
+                CourseCode = learner.CourseAssessmentMark.Course.Code,
+                CourseName = learner.CourseAssessmentMark.Course.Name,
                 Marks = string.Join(", ", learner.CourseAssessmentMark.GetAllMarks())
             }).ToList();
 

@@ -136,12 +136,13 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Return all lowest marks.
+        /// Return all lowest passing marks.
         /// </summary>
         /// <returns></returns>
         public List<int> GetLowestMarks()
         {
-            int minValue = _marks.Min();
+            int minValue = _marks.Where(n => n >= 50).Min();
+
             return _marks.Where(n => n == minValue).ToList();
         }
 
