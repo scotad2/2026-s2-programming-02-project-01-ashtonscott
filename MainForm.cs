@@ -358,13 +358,15 @@ namespace WinFormsApp1
 
             var displayResults = results.Select(course => new
             {
-                Institution = course.Department.Institution.Name,
-                Department = course.Department.Name,
                 Code = course.Code,
                 Name = course.Name,
                 Description = course.Description,
                 Credits = course.Credits,
-                Fees = course.Fees
+                Fees = course.Fees,
+                Institution = course.Department.Institution.Name,
+                Region = course.Department.Institution.Region,
+                Country = course.Department.Institution.Country,
+                Department = course.Department.Name
             }).ToList();
 
             DataGridViewMain.DataSource = displayResults;
