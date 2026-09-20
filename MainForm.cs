@@ -134,7 +134,7 @@ namespace WinFormsApp1
                 LastName = learner.LastName,
                 CourseCode = learner.CourseAssessmentMark.Course.Code,
                 CourseName = learner.CourseAssessmentMark.Course.Name,
-                Marks = string.Join(", ", learner.CourseAssessmentMark.GetAverageMark())
+                AverageMark = learner.CourseAssessmentMark.GetAverageMark()
             }).ToList();
 
             DataGridViewMain.DataSource = averageMarkData;
