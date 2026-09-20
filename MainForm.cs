@@ -179,6 +179,14 @@ namespace WinFormsApp1
             // 2 = ID
 
             int searchField = PersonComboBox.SelectedIndex;
+
+            // Check if a search field hasn't been selected
+            if (searchField == -1)
+            {
+                MessageBox.Show($"You need to select a search field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string searchTerm = PersonSearchTerm.Text;
 
             List<Person> results = [];
@@ -224,6 +232,66 @@ namespace WinFormsApp1
                 ID = person.Id,
                 FirstName = person.FirstName,
                 LastName = person.LastName
+            }).ToList();
+
+            DataGridViewMain.DataSource = displayResults;
+        }
+
+        public void CourseSearch()
+        {
+            // Fields
+
+            // 0 = Course name
+            // 1 = Code
+
+            int searchField = CourseComboBox.SelectedIndex;
+
+            // Check if a search field hasn't been selected
+            if (searchField == -1)
+            {
+                MessageBox.Show($"You need to select a search field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string searchTerm = CourseSearchTerm.Text;
+
+            List<Course> results = [];
+
+            // Search by given field
+
+            if (searchField == 0) // Course name
+            {
+                results.AddRange(_dataHandler.courses.Where(c => c.Name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)));
+            }
+            else if (searchField == 1) // Code
+            {
+                if (int.TryParse(searchTerm, out int code))
+                {
+                    results.AddRange(_dataHandler.courses.Where(c => c.Code == code));
+                }
+                else
+                {
+                    MessageBox.Show($"'{searchTerm}' is not a valid search term for Code.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
+            // Check if no results were matched
+            if (results.Count == 0)
+            {
+                MessageBox.Show($"No matching courses were found.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var displayResults = results.Select(course => new
+            {
+                Institution = course.Department.Institution.Name,
+                Department = course.Department.Name,
+                Code = course.Code,
+                Name = course.Name,
+                Description = course.Description,
+                Credits = course.Credits,
+                Fees = course.Fees
             }).ToList();
 
             DataGridViewMain.DataSource = displayResults;
@@ -339,6 +407,11 @@ namespace WinFormsApp1
         private void PersonSearchButton_Click(object sender, EventArgs e)
         {
             PersonSearch();
+        }
+
+        private void CourseSearchButton_Click(object sender, EventArgs e)
+        {
+            CourseSearch();
         }
     }
 }

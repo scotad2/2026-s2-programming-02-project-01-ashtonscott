@@ -50,11 +50,18 @@
             PersonSearchButton = new Button();
             label2 = new Label();
             PersonComboBox = new ComboBox();
+            groupBox5 = new GroupBox();
+            label3 = new Label();
+            CourseSearchTerm = new TextBox();
+            CourseSearchButton = new Button();
+            label4 = new Label();
+            CourseComboBox = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)DataGridViewMain).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
+            groupBox5.SuspendLayout();
             SuspendLayout();
             // 
             // DisplayCourseDetailsButton
@@ -278,7 +285,7 @@
             groupBox4.Size = new Size(220, 128);
             groupBox4.TabIndex = 17;
             groupBox4.TabStop = false;
-            groupBox4.Text = "Search - Person";
+            groupBox4.Text = "Person";
             // 
             // label1
             // 
@@ -324,12 +331,71 @@
             PersonComboBox.Size = new Size(121, 23);
             PersonComboBox.TabIndex = 18;
             // 
+            // groupBox5
+            // 
+            groupBox5.Controls.Add(label3);
+            groupBox5.Controls.Add(CourseSearchTerm);
+            groupBox5.Controls.Add(CourseSearchButton);
+            groupBox5.Controls.Add(label4);
+            groupBox5.Controls.Add(CourseComboBox);
+            groupBox5.Location = new Point(453, 505);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(220, 128);
+            groupBox5.TabIndex = 21;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "Course";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(6, 72);
+            label3.Name = "label3";
+            label3.Size = new Size(32, 15);
+            label3.TabIndex = 18;
+            label3.Text = "Field";
+            // 
+            // CourseSearchTerm
+            // 
+            CourseSearchTerm.Location = new Point(6, 40);
+            CourseSearchTerm.Name = "CourseSearchTerm";
+            CourseSearchTerm.Size = new Size(202, 23);
+            CourseSearchTerm.TabIndex = 19;
+            // 
+            // CourseSearchButton
+            // 
+            CourseSearchButton.Location = new Point(133, 90);
+            CourseSearchButton.Name = "CourseSearchButton";
+            CourseSearchButton.Size = new Size(75, 23);
+            CourseSearchButton.TabIndex = 18;
+            CourseSearchButton.Text = "Search";
+            CourseSearchButton.UseVisualStyleBackColor = true;
+            CourseSearchButton.Click += CourseSearchButton_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(6, 22);
+            label4.Name = "label4";
+            label4.Size = new Size(34, 15);
+            label4.TabIndex = 20;
+            label4.Text = "Term";
+            // 
+            // CourseComboBox
+            // 
+            CourseComboBox.FormattingEnabled = true;
+            CourseComboBox.Items.AddRange(new object[] { "Name", "Code" });
+            CourseComboBox.Location = new Point(6, 90);
+            CourseComboBox.Name = "CourseComboBox";
+            CourseComboBox.Size = new Size(121, 23);
+            CourseComboBox.TabIndex = 18;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1056, 645);
+            Controls.Add(groupBox5);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
@@ -344,6 +410,8 @@
             groupBox3.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
+            groupBox5.ResumeLayout(false);
+            groupBox5.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -371,5 +439,11 @@
         private ComboBox PersonComboBox;
         private TextBox PersonSearchTerm;
         private Label label2;
+        private GroupBox groupBox5;
+        private Label label3;
+        private TextBox CourseSearchTerm;
+        private Button CourseSearchButton;
+        private Label label4;
+        private ComboBox CourseComboBox;
     }
 }
