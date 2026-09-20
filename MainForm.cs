@@ -167,6 +167,68 @@ namespace WinFormsApp1
             DataGridViewMain.DataSource = lecturerData;
         }
 
+        /// <summary>
+        /// Search for a person by Firstname, Lastname or ID
+        /// </summary>
+        public void PersonSearch()
+        {
+            // Fields
+
+            // 0 = Firstname
+            // 1 = Lastname
+            // 2 = ID
+
+            int searchField = PersonComboBox.SelectedIndex;
+            string searchTerm = PersonSearchTerm.Text;
+
+            List<Person> results = [];
+
+            // Search by given field
+
+            if (searchField == 0) // Firstname
+            {
+                results.AddRange(_dataHandler.learners.Where(l => l.FirstName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)));
+                results.AddRange(_dataHandler.lecturers.Where(l => l.FirstName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)));
+            }
+            else if (searchField == 1) // Lastname
+            {
+                results.AddRange(_dataHandler.learners.Where(l => l.LastName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)));
+                results.AddRange(_dataHandler.lecturers.Where(l => l.LastName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)));
+            }
+            else if (searchField == 2) // ID
+            {
+                if (int.TryParse(searchTerm, out int id))
+                {
+                    results.AddRange(_dataHandler.learners.Where(l => l.Id == id));
+                    results.AddRange(_dataHandler.lecturers.Where(l => l.Id == id));
+                }
+                else
+                {
+                    MessageBox.Show($"'{searchTerm}' is not a valid search term for ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
+            // Check if no results were matched
+            if (results.Count == 0)
+            {
+                MessageBox.Show($"No matching people were found.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var displayResults = results.Select(person => new
+            {
+                // Ternary operator:
+                // If person type is 'Learner', set "Learner" else set "Lecturer"
+                Type = person is Learner ? "Learner" : "Lecturer",
+                ID = person.Id,
+                FirstName = person.FirstName,
+                LastName = person.LastName
+            }).ToList();
+
+            DataGridViewMain.DataSource = displayResults;
+        }
+
         public MainForm()
         {
             InitializeComponent();
@@ -272,6 +334,11 @@ namespace WinFormsApp1
             RemoveLecturerForm form = new(_dataHandler);
 
             form.ShowDialog();
+        }
+
+        private void PersonSearchButton_Click(object sender, EventArgs e)
+        {
+            PersonSearch();
         }
     }
 }

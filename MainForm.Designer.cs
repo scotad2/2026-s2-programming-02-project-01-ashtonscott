@@ -44,10 +44,17 @@
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
             groupBox3 = new GroupBox();
+            groupBox4 = new GroupBox();
+            label1 = new Label();
+            PersonSearchTerm = new TextBox();
+            PersonSearchButton = new Button();
+            label2 = new Label();
+            PersonComboBox = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)DataGridViewMain).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
+            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // DisplayCourseDetailsButton
@@ -259,12 +266,71 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Courses";
             // 
+            // groupBox4
+            // 
+            groupBox4.Controls.Add(label1);
+            groupBox4.Controls.Add(PersonSearchTerm);
+            groupBox4.Controls.Add(PersonSearchButton);
+            groupBox4.Controls.Add(label2);
+            groupBox4.Controls.Add(PersonComboBox);
+            groupBox4.Location = new Point(227, 505);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(220, 128);
+            groupBox4.TabIndex = 17;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Search - Person";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 72);
+            label1.Name = "label1";
+            label1.Size = new Size(32, 15);
+            label1.TabIndex = 18;
+            label1.Text = "Field";
+            // 
+            // PersonSearchTerm
+            // 
+            PersonSearchTerm.Location = new Point(6, 40);
+            PersonSearchTerm.Name = "PersonSearchTerm";
+            PersonSearchTerm.Size = new Size(202, 23);
+            PersonSearchTerm.TabIndex = 19;
+            // 
+            // PersonSearchButton
+            // 
+            PersonSearchButton.Location = new Point(133, 90);
+            PersonSearchButton.Name = "PersonSearchButton";
+            PersonSearchButton.Size = new Size(75, 23);
+            PersonSearchButton.TabIndex = 18;
+            PersonSearchButton.Text = "Search";
+            PersonSearchButton.UseVisualStyleBackColor = true;
+            PersonSearchButton.Click += PersonSearchButton_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(6, 22);
+            label2.Name = "label2";
+            label2.Size = new Size(34, 15);
+            label2.TabIndex = 20;
+            label2.Text = "Term";
+            // 
+            // PersonComboBox
+            // 
+            PersonComboBox.FormattingEnabled = true;
+            PersonComboBox.Items.AddRange(new object[] { "Firstname", "Lastname", "ID" });
+            PersonComboBox.Location = new Point(6, 90);
+            PersonComboBox.Name = "PersonComboBox";
+            PersonComboBox.Size = new Size(121, 23);
+            PersonComboBox.TabIndex = 18;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1056, 511);
+            ClientSize = new Size(1056, 645);
+            Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -276,6 +342,8 @@
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -297,5 +365,11 @@
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
+        private GroupBox groupBox4;
+        private Button PersonSearchButton;
+        private Label label1;
+        private ComboBox PersonComboBox;
+        private TextBox PersonSearchTerm;
+        private Label label2;
     }
 }
