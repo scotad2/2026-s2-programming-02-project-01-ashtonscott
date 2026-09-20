@@ -115,7 +115,7 @@
             // 
             // AddButton
             // 
-            AddButton.BackColor = Color.LimeGreen;
+            AddButton.BackColor = Color.DarkSeaGreen;
             AddButton.Location = new Point(263, 168);
             AddButton.Margin = new Padding(3, 2, 3, 2);
             AddButton.Name = "AddButton";
@@ -151,7 +151,6 @@
             Controls.Add(FirstNameTextBox);
             Name = "AddLecturerForm";
             Text = "Add Lecturer";
-            Load += AddLecturerForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

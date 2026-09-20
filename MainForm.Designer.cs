@@ -61,12 +61,12 @@
             StatisticsComboBox = new ComboBox();
             ComputeButton = new Button();
             groupBox7 = new GroupBox();
+            label8 = new Label();
+            label7 = new Label();
             MaxValue = new TextBox();
             label6 = new Label();
             MinValue = new TextBox();
             FilterButton = new Button();
-            label7 = new Label();
-            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)DataGridViewMain).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -196,7 +196,7 @@
             // 
             // AddLearnerButton
             // 
-            AddLearnerButton.BackColor = SystemColors.ControlLightLight;
+            AddLearnerButton.BackColor = Color.DarkSeaGreen;
             AddLearnerButton.Location = new Point(7, 287);
             AddLearnerButton.Margin = new Padding(4);
             AddLearnerButton.Name = "AddLearnerButton";
@@ -208,7 +208,7 @@
             // 
             // AddLecturerButton
             // 
-            AddLecturerButton.BackColor = SystemColors.ControlLightLight;
+            AddLecturerButton.BackColor = Color.DarkSeaGreen;
             AddLecturerButton.Location = new Point(7, 53);
             AddLecturerButton.Margin = new Padding(4);
             AddLecturerButton.Name = "AddLecturerButton";
@@ -221,7 +221,7 @@
             // 
             // RemoveLecturerButton
             // 
-            RemoveLecturerButton.BackColor = SystemColors.ControlLightLight;
+            RemoveLecturerButton.BackColor = Color.LightCoral;
             RemoveLecturerButton.Location = new Point(100, 53);
             RemoveLecturerButton.Margin = new Padding(4);
             RemoveLecturerButton.Name = "RemoveLecturerButton";
@@ -460,6 +460,24 @@
             groupBox7.TabStop = false;
             groupBox7.Text = "Filter";
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(105, 22);
+            label8.Name = "label8";
+            label8.Size = new Size(64, 15);
+            label8.TabIndex = 30;
+            label8.Text = "Maximum.";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(6, 22);
+            label7.Name = "label7";
+            label7.Size = new Size(63, 15);
+            label7.TabIndex = 29;
+            label7.Text = "Minimum.";
+            // 
             // MaxValue
             // 
             MaxValue.Location = new Point(105, 40);
@@ -486,31 +504,13 @@
             // FilterButton
             // 
             FilterButton.BackColor = Color.Bisque;
-            FilterButton.Location = new Point(186, 40);
+            FilterButton.Location = new Point(186, 39);
             FilterButton.Name = "FilterButton";
             FilterButton.Size = new Size(75, 23);
             FilterButton.TabIndex = 21;
             FilterButton.Text = "Filter";
             FilterButton.UseVisualStyleBackColor = false;
             FilterButton.Click += FilterButton_Click;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(6, 22);
-            label7.Name = "label7";
-            label7.Size = new Size(31, 15);
-            label7.TabIndex = 29;
-            label7.Text = "Min.";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(105, 22);
-            label8.Name = "label8";
-            label8.Size = new Size(32, 15);
-            label8.TabIndex = 30;
-            label8.Text = "Max.";
             // 
             // MainForm
             // 

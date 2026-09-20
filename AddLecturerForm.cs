@@ -26,11 +26,6 @@ namespace WinFormsApp1
             PositionComboBox.DataSource = Enum.GetValues<Lecturer.EPosition>().Select(Lecturer.PositionToString).ToList();
         }
 
-        private void AddLecturerForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddButton_Click(object sender, EventArgs e)
         {
             Lecturer.EPosition position = (Lecturer.EPosition)PositionComboBox.SelectedIndex;

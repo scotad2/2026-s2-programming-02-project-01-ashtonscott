@@ -62,7 +62,7 @@
             // 
             // DeleteButton
             // 
-            DeleteButton.BackColor = Color.Tomato;
+            DeleteButton.BackColor = Color.LightCoral;
             DeleteButton.Location = new Point(93, 56);
             DeleteButton.Name = "DeleteButton";
             DeleteButton.Size = new Size(75, 23);

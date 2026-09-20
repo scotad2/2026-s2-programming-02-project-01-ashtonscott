@@ -189,7 +189,7 @@
             // 
             // AddButton
             // 
-            AddButton.BackColor = Color.LimeGreen;
+            AddButton.BackColor = Color.DarkSeaGreen;
             AddButton.Location = new Point(223, 168);
             AddButton.Margin = new Padding(3, 2, 3, 2);
             AddButton.Name = "AddButton";
@@ -247,7 +247,6 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "AddLearnerForm";
             Text = "Add Person";
-            Load += AddLearnerForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

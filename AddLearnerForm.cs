@@ -24,11 +24,6 @@ namespace WinFormsApp1
             CourseComboBox.DisplayMember = "Name";
         }
 
-        private void AddLearnerForm_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void AddButton_Click(object sender, EventArgs e)
         {
             List<int> marks = [int.Parse(Mark1.Text), int.Parse(Mark2.Text), int.Parse(Mark3.Text), int.Parse(Mark4.Text), int.Parse(Mark5.Text)];

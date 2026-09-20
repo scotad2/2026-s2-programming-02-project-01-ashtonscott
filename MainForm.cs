@@ -239,10 +239,17 @@ namespace WinFormsApp1
 
         public void FilterMarksByRange()
         {
-            // 
+            // Check and parse the marks
             if (!int.TryParse(MinValue.Text, out int minMark) || !int.TryParse(MaxValue.Text, out int maxMark))
             {
                 MessageBox.Show("Please enter valid minimum and maximum marks.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Check that the marks are within the correct range
+            if (minMark < 0 || maxMark < 0 || minMark > 100 || maxMark > 100)
+            {
+                MessageBox.Show("Marks must be between 0 and 100", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -253,6 +260,28 @@ namespace WinFormsApp1
                 MessageBox.Show("The minimum mark cannot be greater than the maximum mark.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            List<Learner> results = [];
+
+            results.AddRange(_dataHandler.learners.Where(l =>l.CourseAssessmentMark.GetAllMarks().Any(mark => mark >= minMark && mark <= maxMark)));
+
+            // Check if no results were matched
+            if (results.Count == 0)
+            {
+                MessageBox.Show($"No matching learners were found with marks between '{minMark}' and '{maxMark}'.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var displayResults = results.Select(learner => new
+            {
+                ID = learner.Id,
+                FirstName = learner.FirstName,
+                LastName = learner.LastName,
+                Course = learner.CourseAssessmentMark.Course.Name,
+                Marks = string.Join(", ", learner.CourseAssessmentMark.GetAllMarks())
+            }).ToList();
+
+            DataGridViewMain.DataSource = displayResults;
         }
 
         public void CourseSearch()
