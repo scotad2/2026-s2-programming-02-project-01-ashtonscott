@@ -9,7 +9,7 @@ namespace WinFormsApp1
         /// <summary>
         /// Display all course details to the main data grid.
         /// </summary>
-        public void DisplayCourseDetails()
+        private void DisplayCourseDetails()
         {
             var courseData = _dataHandler.courses.Select(course => new
             {
@@ -30,7 +30,7 @@ namespace WinFormsApp1
         /// <summary>
         /// Display all marks to the main data grid.
         /// </summary>
-        public void DisplayAllMarks()
+        private void DisplayAllMarks()
         {
             var markData = _dataHandler.learners.Select(learner => new
             {
@@ -48,7 +48,7 @@ namespace WinFormsApp1
         /// <summary>
         /// Display all grades to the main data grid.
         /// </summary>
-        public void DisplayAllGrades()
+        private void DisplayAllGrades()
         {
             var gradeData = _dataHandler.learners.Select(learner =>
             {
@@ -71,7 +71,7 @@ namespace WinFormsApp1
         /// <summary>
         /// Display highest marks to the main data grid.
         /// </summary>
-        public void DisplayHighestMarks()
+        private void DisplayHighestMarks()
         {
             var highestMarkData = _dataHandler.learners.Select(learner => new
             {
@@ -89,7 +89,7 @@ namespace WinFormsApp1
         /// <summary>
         /// Display lowest marks to the main data grid.
         /// </summary>
-        public void DisplayLowestMarks()
+        private void DisplayLowestMarks()
         {
             var lowestMarkData = _dataHandler.learners.Select(learner => new
             {
@@ -107,7 +107,7 @@ namespace WinFormsApp1
         /// <summary>
         /// Display fail marks to the main data grid.
         /// </summary>
-        public void DisplayFailMarks()
+        private void DisplayFailMarks()
         {
             var failMarkData = _dataHandler.learners.Select(learner => new
             {
@@ -125,7 +125,7 @@ namespace WinFormsApp1
         /// <summary>
         /// Display average marks to the main data grid.
         /// </summary>
-        public void DisplayAverageMarks()
+        private void DisplayAverageMarks()
         {
             var averageMarkData = _dataHandler.learners.Select(learner => new
             {
@@ -143,7 +143,7 @@ namespace WinFormsApp1
         /// <summary>
         /// Display average grades to the main data grid.
         /// </summary>
-        public void DisplayAverageGrades()
+        private void DisplayAverageGrades()
         {
             var averageGradeData = _dataHandler.learners.Select(learner => new
             {
@@ -161,7 +161,7 @@ namespace WinFormsApp1
         /// <summary>
         /// Displays lecturer details to the main data grid.
         /// </summary>
-        public void DisplayLecturerDetails()
+        private void DisplayLecturerDetails()
         {
             var lecturerData = _dataHandler.lecturers.Select(lecturer =>
             {
@@ -189,7 +189,7 @@ namespace WinFormsApp1
         /// <summary>
         /// Search for a Person by Firstname, Lastname or ID
         /// </summary>
-        public void PersonSearch()
+        private void PersonSearch()
         {
             // Fields
 
@@ -259,7 +259,7 @@ namespace WinFormsApp1
         /// <summary>
         /// Get all Learners who have a mark within the provided range
         /// </summary>
-        public void FilterMarksByRange()
+        private void FilterMarksByRange()
         {
             // Check and parse the marks
             if (!int.TryParse(MinValue.Text, out int minMark) || !int.TryParse(MaxValue.Text, out int maxMark))
@@ -310,7 +310,7 @@ namespace WinFormsApp1
         /// <summary>
         /// Search for Course by Name or Code
         /// </summary>
-        public void CourseSearch()
+        private void CourseSearch()
         {
             // Fields
 
@@ -375,7 +375,7 @@ namespace WinFormsApp1
         /// <summary>
         /// Calculate the average salary of all Lecturers
         /// </summary>
-        public void CalculateAverageSalary()
+        private void CalculateAverageSalary()
         {
             double averageSalary = _dataHandler.lecturers.Average(l => (int)l.Salary);
 
