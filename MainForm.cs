@@ -363,78 +363,56 @@ namespace WinFormsApp1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                ConsoleDebugger.Log(ex.Message, ConsoleDebugger.LogType.Error);
             }
         }
 
         private void DisplayCourseDetailsButton_Click(object sender, EventArgs e)
         {
-            ConsoleDebugger.Log("'Display Course Details' selected.", ConsoleDebugger.LogType.Event);
-
             DisplayCourseDetails();
         }
 
         private void DisplayAllMarksButton_Click(object sender, EventArgs e)
         {
-            ConsoleDebugger.Log("'Display All Marks' selected.", ConsoleDebugger.LogType.Event);
-
             DisplayAllMarks();
         }
 
         private void DisplayAllGradesButton_Click(object sender, EventArgs e)
         {
-            ConsoleDebugger.Log("'Display All Grades' selected.", ConsoleDebugger.LogType.Event);
-
             DisplayAllGrades();
         }
 
         private void DisplayHighestMarksButton_Click(object sender, EventArgs e)
         {
-            ConsoleDebugger.Log("'Display Highest Marks' selected.", ConsoleDebugger.LogType.Event);
-
             DisplayHighestMarks();
         }
 
         private void DisplayLowestMarksButton_Click(object sender, EventArgs e)
         {
-            ConsoleDebugger.Log("'Display Lowest Marks' selected.", ConsoleDebugger.LogType.Event);
-
             DisplayLowestMarks();
         }
 
         private void DisplayFailMarksButton_Click(object sender, EventArgs e)
         {
-            ConsoleDebugger.Log("'Display Fail Marks' selected.", ConsoleDebugger.LogType.Event);
-
             DisplayFailMarks();
         }
 
         private void DisplayAverageMarksButton_Click(object sender, EventArgs e)
         {
-            ConsoleDebugger.Log("'Display Average Marks' selected.", ConsoleDebugger.LogType.Event);
-
             DisplayAverageMarks();
         }
 
         private void DisplayAverageGradesButton_Click(object sender, EventArgs e)
         {
-            ConsoleDebugger.Log("'Display Average Grades' selected.", ConsoleDebugger.LogType.Event);
-
             DisplayAverageGrades();
         }
 
         private void DisplayLecturerDetailsButton_Click(object sender, EventArgs e)
         {
-            ConsoleDebugger.Log("'Display Lecturer Details' selected.", ConsoleDebugger.LogType.Event);
-
             DisplayLecturerDetails();
         }
 
         private void AddLearnerButton_Click(object sender, EventArgs e)
         {
-            ConsoleDebugger.Log("'Add Learner' selected.", ConsoleDebugger.LogType.Event);
-
             AddLearnerForm form = new(_dataHandler);
 
             form.ShowDialog();
@@ -442,8 +420,6 @@ namespace WinFormsApp1
 
         private void AddLecturerButton_Click(object sender, EventArgs e)
         {
-            ConsoleDebugger.Log("'Add Lecturer' selected.", ConsoleDebugger.LogType.Event);
-
             AddLecturerForm form = new(_dataHandler);
 
             form.ShowDialog();
@@ -451,8 +427,6 @@ namespace WinFormsApp1
 
         private void RemoveLecturerButton_Click(object sender, EventArgs e)
         {
-            ConsoleDebugger.Log("'Remove Lecturer' selected.", ConsoleDebugger.LogType.Event);
-
             RemoveLecturerForm form = new(_dataHandler);
 
             form.ShowDialog();

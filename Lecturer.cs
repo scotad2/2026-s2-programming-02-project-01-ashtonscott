@@ -50,8 +50,6 @@
             Position = position;
             Salary = salary;
             CourseIndex = courseIndex;
-
-            ConsoleDebugger.Log($"Added Lecturer '{firstName} {lastName}'");
         }
 
         /// <summary>

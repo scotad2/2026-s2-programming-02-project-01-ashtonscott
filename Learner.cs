@@ -14,8 +14,6 @@
             FirstName = firstName;
             LastName = lastName;
             CourseAssessmentMark = courseAssessmentMark;
-
-            ConsoleDebugger.Log($"Added Student '{firstName} {lastName}'");
         }
 
         public override string ToString()

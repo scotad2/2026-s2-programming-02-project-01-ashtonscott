@@ -9,29 +9,15 @@
   <Class Name="WinFormsApp1.AddLearnerForm">
     <Position X="9" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AJAAAAAAACAAABAAAACAIAAGAAAAECgAQgAABICBAAE=</HashCode>
+      <HashCode>AJAAAAAAACAAABAAAACAIAAGAAAAECgAQgAABICBAAA=</HashCode>
       <FileName>AddLearnerForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WinFormsApp1.AddLecturerForm">
     <Position X="10.75" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AJAAAAAAACgAABAAAACAIAACAAAAACAAQgAABMAAAAA=</HashCode>
+      <HashCode>AJAAAAAAACAAABAAAACAIAACAAAAACAAQgAABMAAAAA=</HashCode>
       <FileName>AddLecturerForm.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="WinFormsApp1.ConsoleDebugger">
-    <Position X="16.25" Y="6.5" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="WinFormsApp1.ConsoleDebugger.LogType" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>ConsoleDebugger.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAQgAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ConsoleDebugger.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WinFormsApp1.Course">
