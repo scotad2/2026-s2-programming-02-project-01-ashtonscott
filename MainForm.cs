@@ -168,7 +168,7 @@ namespace WinFormsApp1
         }
 
         /// <summary>
-        /// Search for a person by Firstname, Lastname or ID
+        /// Search for a Person by Firstname, Lastname or ID
         /// </summary>
         public void PersonSearch()
         {
@@ -237,6 +237,9 @@ namespace WinFormsApp1
             DataGridViewMain.DataSource = displayResults;
         }
 
+        /// <summary>
+        /// Get all Learners who have a mark within the provided range
+        /// </summary>
         public void FilterMarksByRange()
         {
             // Check and parse the marks
@@ -284,6 +287,9 @@ namespace WinFormsApp1
             DataGridViewMain.DataSource = displayResults;
         }
 
+        /// <summary>
+        /// Search for Course by Name or Code
+        /// </summary>
         public void CourseSearch()
         {
             // Fields
@@ -344,6 +350,9 @@ namespace WinFormsApp1
             DataGridViewMain.DataSource = displayResults;
         }
 
+        /// <summary>
+        /// Calculate the average salary of all Lecturers
+        /// </summary>
         public void CalculateAverageSalary()
         {
             double averageSalary = _dataHandler.lecturers.Average(l => (int)l.Salary);
@@ -444,6 +453,10 @@ namespace WinFormsApp1
 
         private void ComputeButton_Click(object sender, EventArgs e)
         {
+            // Fields
+
+            // 0 = Calculate average Lecturer salaries
+
             int statisticsOption = StatisticsComboBox.SelectedIndex;
 
             // Check if the user hasn't selected anything
